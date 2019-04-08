@@ -101,6 +101,9 @@ public class Startup {
         String surname = surnames.get(random.nextInt(surnames.size()));
         String address = places.get(random.nextInt(surnames.size())).concat(" " + random.nextInt(100));
 
+        name = name.replaceFirst(name.substring(0,1), name.substring(0,1).toUpperCase());
+        surname = surname.replaceFirst(surname.substring(0,1), surname.substring(0,1).toUpperCase());
+
         return employeeRepository.save(
                 new Employee(name, surname, address
                         , name + "." + surname + "@" + department.getName().replace(" ", "") + ".net"

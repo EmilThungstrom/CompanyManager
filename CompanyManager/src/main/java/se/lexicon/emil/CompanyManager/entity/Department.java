@@ -20,6 +20,7 @@ public class Department {
     private String name;
 
     @OneToOne
+    @JsonView(Filter.DepartmentData.class)
     private Employee head;
 
     @OneToMany(

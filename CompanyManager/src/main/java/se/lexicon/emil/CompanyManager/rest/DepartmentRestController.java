@@ -2,6 +2,7 @@ package se.lexicon.emil.CompanyManager.rest;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entity.Department;
@@ -24,19 +25,29 @@ public class DepartmentRestController {
 
     @GetMapping("/departments")
     @JsonView(Filter.DepartmentData.class)
-    public List<Department> findAll(){
-        return departmentService.findAll();
+    public ResponseEntity<List<Department>> findAll(){
+        List<Department> departments = departmentService.findAll();
+
+        if(departments.isEmpty())
+            return ResponseEntity.noContent().build();
+        else
+            return ResponseEntity.ok(departments);
     }
 
     @GetMapping(value = "/department", params = "name")
     @JsonView(Filter.DepartmentData.class)
-    public List<Department> findByPartialName( @RequestParam("name") String departmentName){
-        return departmentService.findByNameContaining(departmentName);
+    public ResponseEntity<List<Department>> findByPartialName( @RequestParam("name") String departmentName){
+        List<Department> departments = departmentService.findByNameContaining(departmentName);
+
+        if(departments.isEmpty())
+            return ResponseEntity.noContent().build();
+        else
+            return ResponseEntity.ok(departments);
     }
 
     @GetMapping(value = "/department", params = "id")
     @JsonView(Filter.DepartmentData.class)
-    public Department findById( @RequestParam("id") int id){
-        return departmentService.findById(id);
+    public ResponseEntity<Department> findById( @RequestParam("id") int id){
+        return ResponseEntity.ok(departmentService.findById(id));
     }
 }
