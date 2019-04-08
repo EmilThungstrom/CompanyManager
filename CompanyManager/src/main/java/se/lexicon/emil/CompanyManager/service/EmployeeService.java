@@ -8,5 +8,6 @@ public interface EmployeeService {
 
     List<Employee> findAll();
     List<Employee> findByFirstName(String name);
+
     Employee findById(int id);
 }

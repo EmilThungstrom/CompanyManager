@@ -8,19 +8,26 @@ import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
-    @Autowired
     EmployeeRepository employeeRepository;
+
+    @Autowired
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
 
     @Override
     public List<Employee> findAll() {
-        List<Employee> departments = new ArrayList<>();
-        employeeRepository.findAll().forEach(department -> departments.add(department));
-        return departments;
+        //List<Employee> departments = new ArrayList<>();
+        //employeeRepository.findAll().forEach(department -> departments.add(department));
+        //return departments;
+
+        return (List<Employee>) employeeRepository.findAll();
     }
 
     @Override
@@ -30,6 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findById(int id) {
-        return employeeRepository.findById(id).get();
+        Optional<Employee> result = employeeRepository.findById(id);
+        return result.orElseThrow(IllegalArgumentException::new);
     }
 }

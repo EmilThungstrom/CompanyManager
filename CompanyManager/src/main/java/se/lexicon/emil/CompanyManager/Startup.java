@@ -11,6 +11,7 @@ import se.lexicon.emil.CompanyManager.entity.Team;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
+import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.io.IOException;
 import java.nio.file.Files;

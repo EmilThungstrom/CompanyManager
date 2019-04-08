@@ -16,8 +16,12 @@ import java.util.List;
 @RequestMapping("/api/employee")
 public class EmployeeRestController {
 
-    @Autowired
     EmployeeService employeeService;
+
+    @Autowired
+    public EmployeeRestController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @GetMapping("/employees")
     @JsonView(Filter.EmployeeData.class)

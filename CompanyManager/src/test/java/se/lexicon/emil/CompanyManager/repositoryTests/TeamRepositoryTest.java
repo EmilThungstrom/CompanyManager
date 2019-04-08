@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager.repositoryTest;
+package se.lexicon.emil.CompanyManager.repositoryTests;
 
 
 import org.junit.Before;
