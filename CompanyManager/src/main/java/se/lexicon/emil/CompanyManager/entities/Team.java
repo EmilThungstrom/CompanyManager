@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager.entity;
+package se.lexicon.emil.CompanyManager.entities;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import se.lexicon.emil.CompanyManager.Filter;
@@ -16,10 +16,14 @@ public class Team {
     @JsonView(Filter.BaseData.class)
     private int id;
 
-    @ManyToOne
+    @ManyToOne(
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
+    )
     private Department department;
 
-    @OneToOne
+    @OneToOne(
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
+    )
     private Employee leader;
 
     @OneToMany(

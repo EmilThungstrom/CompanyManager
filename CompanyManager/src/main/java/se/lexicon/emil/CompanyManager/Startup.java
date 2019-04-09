@@ -5,13 +5,12 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import se.lexicon.emil.CompanyManager.entity.Department;
-import se.lexicon.emil.CompanyManager.entity.Employee;
-import se.lexicon.emil.CompanyManager.entity.Team;
+import se.lexicon.emil.CompanyManager.entities.Department;
+import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.entities.Team;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
-import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -62,8 +61,8 @@ public class Startup {
         mark.setHead(headMark);
         maint.setHead(headMaint);
 
-        int[] maxRandomEmployees = {20, 25, 10, 15, 20};
-        int[] minEmployees = {5, 50, 10, 5, 10};
+        int[] maxRandomEmployees = {1, 25, 10, 15, 20};
+        int[] minEmployees = {1, 50, 10, 5, 10};
         Department department = null;
         Team team = null;
         for(int i = 0; i < 5; i++){

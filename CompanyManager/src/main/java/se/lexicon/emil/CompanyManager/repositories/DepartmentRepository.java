@@ -1,8 +1,8 @@
 package se.lexicon.emil.CompanyManager.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import se.lexicon.emil.CompanyManager.entity.Department;
-import se.lexicon.emil.CompanyManager.entity.Employee;
+import se.lexicon.emil.CompanyManager.entities.Department;
+import se.lexicon.emil.CompanyManager.entities.Employee;
 
 import java.util.List;
 

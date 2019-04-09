@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager.entity;
+package se.lexicon.emil.CompanyManager.entities;
 
 import javax.persistence.*;
 import java.util.Objects;

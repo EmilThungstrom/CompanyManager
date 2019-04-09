@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager.entity;
+package se.lexicon.emil.CompanyManager.entities;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import se.lexicon.emil.CompanyManager.Filter;
@@ -23,11 +23,15 @@ public class Employee {
     @JsonView(Filter.BaseData.class)
     private String email;
 
-    @ManyToOne
+    @ManyToOne(
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
+    )
     @JsonView(Filter.EmployeeData.class)
     private Team team;
 
-    @ManyToOne
+    @ManyToOne(
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
+    )
     @JsonView(Filter.EmployeeData.class)
     private Department department;
 

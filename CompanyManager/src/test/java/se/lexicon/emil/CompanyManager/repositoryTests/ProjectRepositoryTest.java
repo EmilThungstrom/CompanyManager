@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import se.lexicon.emil.CompanyManager.entity.Project;
-import se.lexicon.emil.CompanyManager.entity.Team;
+import se.lexicon.emil.CompanyManager.entities.Project;
+import se.lexicon.emil.CompanyManager.entities.Team;
 import se.lexicon.emil.CompanyManager.repositories.ProjectRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 

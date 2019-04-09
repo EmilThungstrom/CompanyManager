@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import se.lexicon.emil.CompanyManager.Filter;
-import se.lexicon.emil.CompanyManager.entity.Employee;
+import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.service.EmployeeService;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 @RestController

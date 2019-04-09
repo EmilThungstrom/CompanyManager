@@ -1,11 +1,10 @@
 package se.lexicon.emil.CompanyManager.service;
 
-import se.lexicon.emil.CompanyManager.entity.Department;
-import se.lexicon.emil.CompanyManager.entity.Employee;
-import se.lexicon.emil.CompanyManager.entity.Team;
+import se.lexicon.emil.CompanyManager.entities.Department;
+import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.entities.Team;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TeamService {
 

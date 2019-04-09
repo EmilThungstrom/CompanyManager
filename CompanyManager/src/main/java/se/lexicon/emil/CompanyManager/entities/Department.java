@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager.entity;
+package se.lexicon.emil.CompanyManager.entities;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import se.lexicon.emil.CompanyManager.Filter;
@@ -26,7 +26,8 @@ public class Department {
     @OneToMany(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
-            mappedBy = "department"
+            mappedBy = "department",
+            orphanRemoval = true
     )
     @JsonView(Filter.DepartmentData.class)
     private List<Employee> employees = new LinkedList<>();
@@ -34,7 +35,8 @@ public class Department {
     @OneToMany(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
-            mappedBy = "department"
+            mappedBy = "department",
+            orphanRemoval = true
     )
     @JsonView(Filter.DepartmentData.class)
     private List<Team> teams = new LinkedList<>();

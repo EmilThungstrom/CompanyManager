@@ -1,9 +1,9 @@
 package se.lexicon.emil.CompanyManager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import se.lexicon.emil.CompanyManager.entity.Department;
-import se.lexicon.emil.CompanyManager.entity.Employee;
-import se.lexicon.emil.CompanyManager.entity.Team;
+import se.lexicon.emil.CompanyManager.entities.Department;
+import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.entities.Team;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 
 import java.util.List;
