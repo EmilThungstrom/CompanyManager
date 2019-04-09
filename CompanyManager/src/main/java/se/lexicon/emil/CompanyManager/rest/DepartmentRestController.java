@@ -2,11 +2,13 @@ package se.lexicon.emil.CompanyManager.rest;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.forms.DepartmentEmployeeForm;
+import se.lexicon.emil.CompanyManager.forms.DepartmentTeamForm;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.util.List;
@@ -68,15 +70,45 @@ public class DepartmentRestController {
 
     @PostMapping("/employee/assign")
     public ResponseEntity assignEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) {
-        departmentService.assignEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
-
+        try{
+            departmentService.assignEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().build();
+        }
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/employee/remove")
     public ResponseEntity removeEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) {
-        departmentService.assignEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
+        try{
+            departmentService.deleteEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().build();
+        }catch (IllegalAccessException e){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        return ResponseEntity.ok().build();
+    }
 
+    @PostMapping("/team/add")
+    public ResponseEntity addTeam(@RequestBody DepartmentTeamForm departmentTeamForm){
+        try{
+            departmentService.addTeam(departmentTeamForm.departmentId);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/team/remove")
+    public ResponseEntity removeTeam(@RequestBody DepartmentTeamForm departmentTeamForm){
+        try{
+            departmentService.deleteTeam(departmentTeamForm.departmentId, departmentTeamForm.teamId);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().build();
+        }catch (IllegalAccessException e){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
         return ResponseEntity.ok().build();
     }
 }

@@ -17,5 +17,8 @@ public interface DepartmentService {
     void deleteDepartment(int id);
 
     void assignEmployees(int departmentId, int[] employeeIds);
-    void deleteEmployees(int departmentId, int[] employeeIds);
+    void deleteEmployees(int departmentId, int[] employeeIds) throws IllegalAccessException;
+
+    void addTeam(int departmentId);
+    void deleteTeam(int departmentId, int teamId) throws IllegalAccessException;
 }
