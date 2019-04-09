@@ -33,6 +33,16 @@ public class EmployeeRestController {
             return ResponseEntity.ok(employeeService.findAll());
     }
 
+    @GetMapping(params = "id")
+    @JsonView(Filter.EmployeeData.class)
+    public ResponseEntity<Employee> findById(@RequestParam("id") int employeeId) {
+        try{
+            return ResponseEntity.ok(employeeService.findById(employeeId));
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.noContent().build();
+        }
+    }
+
     @PostMapping
     @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<List<Employee>> findByForm(@RequestBody EmployeeForm employeeForm){
@@ -42,5 +52,18 @@ public class EmployeeRestController {
             return ResponseEntity.noContent().build();
 
         return ResponseEntity.ok(employees);
+    }
+
+    @PostMapping("/create")
+    @JsonView(Filter.EmployeeData.class)
+    public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeForm employeeForm){
+        return ResponseEntity.ok(employeeService.createEmployee(employeeForm));
+    }
+
+    @PostMapping("/delete")
+    @JsonView(Filter.EmployeeData.class)
+    public ResponseEntity<Employee> deleteEmployee(@RequestBody int employeeId){
+        employeeService.deleteEmployee(employeeId);
+        return ResponseEntity.ok().build();
     }
 }

@@ -11,4 +11,7 @@ public interface EmployeeService {
     List<Employee> findByForm(EmployeeForm employeeForm);
 
     Employee findById(int id);
+
+    Employee createEmployee(EmployeeForm employeeForm);
+    void deleteEmployee(int employeeId);
 }

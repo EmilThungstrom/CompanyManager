@@ -3,12 +3,15 @@ package se.lexicon.emil.CompanyManager.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.entities.Team;
 import se.lexicon.emil.CompanyManager.forms.EmployeeForm;
+import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
+import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -17,10 +20,14 @@ import java.util.stream.Stream;
 public class EmployeeServiceImpl implements EmployeeService {
 
     EmployeeRepository employeeRepository;
+    TeamRepository teamRepository;
+    DepartmentRepository departmentRepository;
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository, TeamRepository teamRepository, DepartmentRepository departmentRepository) {
         this.employeeRepository = employeeRepository;
+        this.teamRepository = teamRepository;
+        this.departmentRepository = departmentRepository;
     }
 
     @Override
@@ -49,11 +56,31 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeStream = employeeStream.filter(employee -> employee.getFirstName().equalsIgnoreCase(employeeForm.getFirstName()));
         if(employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getLastName().equalsIgnoreCase(employeeForm.getLastName()));
-        if(employeeForm.getAdress() != null && !employeeForm.getAdress().isEmpty())
-            employeeStream = employeeStream.filter(employee -> employee.getAddress().equalsIgnoreCase(employeeForm.getAdress()));
+        if(employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
+            employeeStream = employeeStream.filter(employee -> employee.getAddress().equalsIgnoreCase(employeeForm.getAddress()));
         if(employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getEmail().equalsIgnoreCase(employeeForm.getEmail()));
 
         return employeeStream.collect(Collectors.toList());
+    }
+
+    @Override
+    public Employee createEmployee(EmployeeForm employeeForm) {
+
+        Team team = null;
+        if(employeeForm.teamId > 0)
+            team = teamRepository.findById(employeeForm.teamId).orElseThrow(IllegalArgumentException::new);
+
+        Department department = null;
+        if(employeeForm.departmentId > 0)
+            department = departmentRepository.findById(employeeForm.departmentId).orElseThrow(IllegalArgumentException::new);
+
+        Employee employee = new Employee(employeeForm.getFirstName(), employeeForm.getLastName(), employeeForm.getAddress(), employeeForm.getEmail(), team, department);
+        return employeeRepository.save(employee);
+    }
+
+    @Override
+    public void deleteEmployee(int employeeId) {
+        employeeRepository.deleteById(employeeId);
     }
 }
