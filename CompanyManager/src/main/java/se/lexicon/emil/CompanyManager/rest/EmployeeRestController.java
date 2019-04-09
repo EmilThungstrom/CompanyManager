@@ -3,12 +3,10 @@ package se.lexicon.emil.CompanyManager.rest;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.forms.EmployeeForm;
 import se.lexicon.emil.CompanyManager.service.EmployeeService;
 
 import java.util.List;
@@ -24,7 +22,7 @@ public class EmployeeRestController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("/employees")
+    @GetMapping
     @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<List<Employee>> findall() {
         List<Employee> employees = employeeService.findAll();
@@ -35,14 +33,14 @@ public class EmployeeRestController {
             return ResponseEntity.ok(employeeService.findAll());
     }
 
-    @GetMapping(value = "/employee", params = "firstname")
+    @PostMapping
     @JsonView(Filter.EmployeeData.class)
-    public ResponseEntity<List<Employee>> findByFirstName(@RequestParam("firstname") String firstName){
-        List<Employee> employees = employeeService.findByFirstName(firstName);
+    public ResponseEntity<List<Employee>> findByForm(@RequestBody EmployeeForm employeeForm){
+        List<Employee> employees = employeeService.findByForm(employeeForm);
 
         if(employees.isEmpty())
             return ResponseEntity.noContent().build();
-        else
-            return ResponseEntity.ok(employeeService.findAll());
+
+        return ResponseEntity.ok(employees);
     }
 }

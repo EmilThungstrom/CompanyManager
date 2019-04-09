@@ -9,10 +9,10 @@ import java.util.List;
 
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
-    List<Employee> findByFirstName(String firstName);
-    List<Employee> findByLastName(String lastName);
-    List<Employee> findByAddress(String address);
-    List<Employee> findByEmail(String email);
+    List<Employee> findByFirstNameIgnoreCase(String firstName);
+    List<Employee> findByLastNameIgnoreCase(String lastName);
+    List<Employee> findByAddressIgnoreCase(String address);
+    List<Employee> findByEmailIgnoreCase(String email);
 
     List<Employee> findByTeam(Team team);
     List<Employee> findByDepartment(Department department);

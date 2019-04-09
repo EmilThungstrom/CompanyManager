@@ -65,7 +65,7 @@ public class EmployeeRepositoryTest {
     public void test_GetByFirstName()
     {
         List<Employee> expected = Arrays.asList(testEmployee);
-        List<Employee> actual = employeeRepository.findByFirstName("First1");
+        List<Employee> actual = employeeRepository.findByFirstNameIgnoreCase("First1");
         assertEquals(expected, actual);
     }
 
@@ -73,7 +73,7 @@ public class EmployeeRepositoryTest {
     public void test_GetByLastName()
     {
         List<Employee> expected = Arrays.asList(testEmployee);
-        List<Employee> actual = employeeRepository.findByLastName("Last1");
+        List<Employee> actual = employeeRepository.findByLastNameIgnoreCase("Last1");
         assertEquals(expected, actual);
     }
 
@@ -81,7 +81,7 @@ public class EmployeeRepositoryTest {
     public void test_GetByAddress()
     {
         List<Employee> expected = Arrays.asList(testEmployee);
-        List<Employee> actual = employeeRepository.findByAddress("address1");
+        List<Employee> actual = employeeRepository.findByAddressIgnoreCase("address1");
         assertEquals(expected, actual);
     }
 
@@ -89,7 +89,7 @@ public class EmployeeRepositoryTest {
     public void test_GetByEmail()
     {
         List<Employee> expected = Arrays.asList(testEmployee);
-        List<Employee> actual = employeeRepository.findByEmail("email1");
+        List<Employee> actual = employeeRepository.findByEmailIgnoreCase("email1");
         assertEquals(expected, actual);
     }
 

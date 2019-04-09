@@ -3,21 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="203314d3-4bf3-47a0-889a-8aefdbfd7662" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/CompanyManager.iws" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyManager.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Startup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Project.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/ProjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/TeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/TeamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/DepartmentRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/DepartmentRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/ClientRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/ProjectRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/forms/EmployeeAssignForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/rest/DepartmentRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/rest/DepartmentRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Startup.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="112" column="65" selection-start-line="112" selection-start-column="65" selection-end-line="112" selection-end-column="65" />
+            <state relative-caret-position="194">
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,10 +35,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/DepartmentRepositoryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="24" selection-start-line="24" selection-end-line="65" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,10 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,10 +59,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="54" column="99" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/EmployeeForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+              <folding>
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#1387#1388#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+                <element signature="e#1354#1355#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-572">
+            <state relative-caret-position="-326">
               <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,10 +200,8 @@
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTest/EmployeeRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTest/TeamRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/ProjectRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/DepartmentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/ClientRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/CompanyManagerApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/serviceTests/DepartmentServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamService.java" />
@@ -173,11 +212,8 @@
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Department.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/DepartmentForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/EmployeeAssignForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/DepartmentTeamForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/DepartmentRestController.java" />
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/ClientRepositoryTest.java" />
@@ -185,6 +221,13 @@
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/TeamRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Startup.java" />
         <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/EmployeeForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -195,7 +238,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="67" />
     <option name="y" value="30" />
     <option name="width" value="1371" />
@@ -384,6 +427,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in CompanyManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CompanyManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClientRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CompanyManager" />
       <extension name="coverage">
@@ -394,21 +445,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="se.lexicon.emil.CompanyManager.repositoryTests" />
       <option name="MAIN_CLASS_NAME" value="se.lexicon.emil.CompanyManager.repositoryTests.ClientRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DepartmentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CompanyManager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se.lexicon.emil.CompanyManager.serviceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="se.lexicon.emil.CompanyManager.serviceTests" />
-      <option name="MAIN_CLASS_NAME" value="se.lexicon.emil.CompanyManager.serviceTests.DepartmentServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -449,10 +485,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CompanyManagerApplication" />
+        <item itemvalue="JUnit.All in CompanyManager" />
         <item itemvalue="JUnit.DepartmentServiceTest.test_FindByName" />
         <item itemvalue="JUnit.ClientRepositoryTest" />
         <item itemvalue="JUnit.DepartmentServiceTest.test_FailFindById" />
-        <item itemvalue="JUnit.DepartmentServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -470,9 +506,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_CompanyManager - 2019.04.01 at 12h 39m 58s.xml">
-      <configuration name="All in CompanyManager" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DepartmentServiceTest_test_FailFindById - 2019.04.05 at 13h 49m 37s.xml">
       <configuration name="DepartmentServiceTest.test_FailFindById" configurationId="JUnit" />
     </history-entry>
@@ -500,12 +533,15 @@
     <history-entry file="DepartmentServiceTest_test_FindByName - 2019.04.08 at 09h 48m 10s.xml">
       <configuration name="DepartmentServiceTest.test_FindByName" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_CompanyManager - 2019.04.09 at 11h 32m 53s.xml">
+      <configuration name="All in CompanyManager" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="67" y="25" width="1533" height="875" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25958306" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25958306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -514,12 +550,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966374" weight="0.32841823" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966374" visible="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003362" side_tool="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3297587" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32841823" />
@@ -537,6 +573,18 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTest/TestProjectRepository.java" />
@@ -600,16 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -714,36 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/DepartmentEmployeeForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -798,16 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -822,16 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="24" selection-start-line="24" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -860,9 +848,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/DepartmentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/EmployeeRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="269">
           <caret line="112" column="65" selection-start-line="112" selection-start-column="65" selection-end-line="112" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -870,10 +885,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/se/lexicon/emil/CompanyManager/repositoryTests/TeamRepositoryTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="140">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/forms/EmployeeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/repositories/EmployeeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="54" column="99" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

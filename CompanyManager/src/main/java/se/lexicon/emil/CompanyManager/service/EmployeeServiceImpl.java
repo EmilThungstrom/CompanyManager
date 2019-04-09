@@ -4,10 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Employee;
+import se.lexicon.emil.CompanyManager.forms.EmployeeForm;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 @Transactional
@@ -30,13 +33,27 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> findByFirstName(String name) {
-        return null;
+    public Employee findById(int id) {
+        return employeeRepository.findById(id).orElseThrow(IllegalArgumentException::new);
     }
 
     @Override
-    public Employee findById(int id) {
-        Optional<Employee> result = employeeRepository.findById(id);
-        return result.orElseThrow(IllegalArgumentException::new);
+    public List<Employee> findByForm(EmployeeForm employeeForm) {
+        Stream<Employee> employeeStream = ((List<Employee>)employeeRepository.findAll()).stream();
+
+        if(employeeForm.departmentId > 0)
+            employeeStream = employeeStream.filter(employee -> employee.getDepartment().getId() == employeeForm.departmentId);
+        if(employeeForm.teamId > 0)
+            employeeStream = employeeStream.filter(employee -> employee.getTeam().getId() == employeeForm.teamId);
+        if(employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
+            employeeStream = employeeStream.filter(employee -> employee.getFirstName().equalsIgnoreCase(employeeForm.getFirstName()));
+        if(employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
+            employeeStream = employeeStream.filter(employee -> employee.getLastName().equalsIgnoreCase(employeeForm.getLastName()));
+        if(employeeForm.getAdress() != null && !employeeForm.getAdress().isEmpty())
+            employeeStream = employeeStream.filter(employee -> employee.getAddress().equalsIgnoreCase(employeeForm.getAdress()));
+        if(employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
+            employeeStream = employeeStream.filter(employee -> employee.getEmail().equalsIgnoreCase(employeeForm.getEmail()));
+
+        return employeeStream.collect(Collectors.toList());
     }
 }
