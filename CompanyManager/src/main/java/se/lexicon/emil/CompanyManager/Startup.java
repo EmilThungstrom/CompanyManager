@@ -110,7 +110,7 @@ public class Startup {
     }
 
     private Team createTeam(Department department){
-        Team team = teamRepository.save(new Team(department, null, null));
+        Team team = teamRepository.save(new Team(department, null));
         Employee employee = createEmployee(department, team);
         team.setLeader(employee);
         return team;

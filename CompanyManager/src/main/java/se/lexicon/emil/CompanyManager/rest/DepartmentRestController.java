@@ -78,7 +78,7 @@ public class DepartmentRestController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/employee/remove")
+    @PostMapping("/employee/delete")
     public ResponseEntity removeEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) {
         try{
             departmentService.deleteEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
@@ -100,7 +100,7 @@ public class DepartmentRestController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/team/remove")
+    @PostMapping("/team/delete")
     public ResponseEntity removeTeam(@RequestBody DepartmentTeamForm departmentTeamForm){
         try{
             departmentService.deleteTeam(departmentTeamForm.departmentId, departmentTeamForm.teamId);

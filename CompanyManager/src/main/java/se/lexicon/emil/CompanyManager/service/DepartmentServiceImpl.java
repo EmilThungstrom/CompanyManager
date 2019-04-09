@@ -92,7 +92,7 @@ public class DepartmentServiceImpl implements DepartmentService{
     @Override
     public void addTeam(int departmentId) {
         Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
-        Team team = new Team(department, null, null);
+        Team team = new Team(department, null);
         teamRepository.save(team);
     }
 

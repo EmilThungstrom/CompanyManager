@@ -46,8 +46,8 @@ public class EmployeeRepositoryTest {
         department1 = departmentRepository.save(department1);
         department2 = departmentRepository.save(department2);
 
-        Team team1 = new Team(null, null, null);
-        Team team2 = new Team(null, null, null);
+        Team team1 = new Team(null, null);
+        Team team2 = new Team(null, null);
 
         testTeam = team1;
 
