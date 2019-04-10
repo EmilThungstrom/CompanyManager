@@ -19,11 +19,13 @@ public class Team {
     @ManyToOne(
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
     )
+    @JsonView(Filter.TeamData.class)
     private Department department;
 
     @OneToOne(
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
     )
+    @JsonView(Filter.BaseData.class)
     private Employee leader;
 
     @OneToMany(
@@ -31,6 +33,7 @@ public class Team {
             fetch = FetchType.LAZY,
             mappedBy = "team"
     )
+    @JsonView(Filter.TeamData.class)
     private List<Employee> members = new LinkedList<>();
 
     public Team(Department department, Employee leader) {

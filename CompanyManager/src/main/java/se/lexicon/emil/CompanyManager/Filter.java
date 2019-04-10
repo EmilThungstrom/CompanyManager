@@ -5,4 +5,5 @@ public class Filter {
     public interface BaseData {}
     public interface DepartmentData extends BaseData {}
     public interface EmployeeData extends BaseData {}
+    public interface TeamData extends BaseData {}
 }
