@@ -1,13 +1,11 @@
 package se.lexicon.emil.CompanyManager.rest;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Team;
 import se.lexicon.emil.CompanyManager.service.TeamService;
 
@@ -25,7 +23,6 @@ public class TeamRestController {
     }
 
     @GetMapping
-    @JsonView(Filter.TeamData.class)
     public ResponseEntity<List<Team>> findAll(){
         List<Team> teams = teamService.findAll();
 
@@ -36,7 +33,6 @@ public class TeamRestController {
     }
 
     @GetMapping(params = "teamId")
-    @JsonView(Filter.TeamData.class)
     public ResponseEntity<Team> findById(@RequestParam int teamId){
         Team team = null;
         try{
@@ -48,7 +44,6 @@ public class TeamRestController {
     }
 
     @GetMapping(params = "leaderId")
-    @JsonView(Filter.TeamData.class)
     public ResponseEntity<List<Team>> findByLeader(@RequestParam int leaderId){
         List<Team> team = null;
         try{
@@ -60,7 +55,6 @@ public class TeamRestController {
     }
 
     @GetMapping(params = "departmentId")
-    @JsonView(Filter.TeamData.class)
     public ResponseEntity<List<Team>> findByDepartment(@RequestParam int departmentId){
         List<Team> team = null;
         try{

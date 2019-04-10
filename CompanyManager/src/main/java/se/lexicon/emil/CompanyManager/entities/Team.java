@@ -1,7 +1,6 @@
 package se.lexicon.emil.CompanyManager.entities;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import se.lexicon.emil.CompanyManager.Filter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.LinkedList;
@@ -13,19 +12,18 @@ public class Team {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonView(Filter.BaseData.class)
     private int id;
 
     @ManyToOne(
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
     )
-    @JsonView(Filter.TeamData.class)
+    @JsonIgnoreProperties({"employees", "teams", "head"})
     private Department department;
 
     @OneToOne(
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}
     )
-    @JsonView(Filter.BaseData.class)
+    @JsonIgnoreProperties({"team", "department"})
     private Employee leader;
 
     @OneToMany(
@@ -33,7 +31,7 @@ public class Team {
             fetch = FetchType.LAZY,
             mappedBy = "team"
     )
-    @JsonView(Filter.TeamData.class)
+    @JsonIgnoreProperties({"team", "department"})
     private List<Employee> members = new LinkedList<>();
 
     public Team(Department department, Employee leader) {

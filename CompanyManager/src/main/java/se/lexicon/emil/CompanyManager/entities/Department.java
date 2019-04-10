@@ -1,7 +1,6 @@
 package se.lexicon.emil.CompanyManager.entities;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import se.lexicon.emil.CompanyManager.Filter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.LinkedList;
@@ -13,14 +12,12 @@ public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonView(Filter.BaseData.class)
     private int id;
 
-    @JsonView(Filter.BaseData.class)
     private String name;
 
     @OneToOne
-    @JsonView(Filter.DepartmentData.class)
+    @JsonIgnoreProperties("department")
     private Employee head;
 
     @OneToMany(
@@ -29,7 +26,7 @@ public class Department {
             mappedBy = "department",
             orphanRemoval = true
     )
-    @JsonView(Filter.DepartmentData.class)
+    @JsonIgnoreProperties("department")
     private List<Employee> employees = new LinkedList<>();
 
     @OneToMany(
@@ -38,7 +35,7 @@ public class Department {
             mappedBy = "department",
             orphanRemoval = true
     )
-    @JsonView(Filter.DepartmentData.class)
+    @JsonIgnoreProperties("department")
     private List<Team> teams = new LinkedList<>();
 
     public Department(String name, Employee head) {

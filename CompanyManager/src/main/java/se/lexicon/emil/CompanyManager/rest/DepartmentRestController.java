@@ -1,11 +1,9 @@
 package se.lexicon.emil.CompanyManager.rest;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.forms.DepartmentEmployeeForm;
 import se.lexicon.emil.CompanyManager.forms.TeamForm;
@@ -26,7 +24,6 @@ public class DepartmentRestController {
     }
 
     @GetMapping
-    @JsonView(Filter.DepartmentData.class)
     public ResponseEntity<List<Department>> findAll(){
         List<Department> departments = departmentService.findAll();
 
@@ -37,7 +34,6 @@ public class DepartmentRestController {
     }
 
     @GetMapping(params = "name")
-    @JsonView(Filter.DepartmentData.class)
     public ResponseEntity<List<Department>> findByPartialName( @RequestParam("name") String departmentName){
         List<Department> departments = departmentService.findByNameContaining(departmentName);
 
@@ -48,7 +44,6 @@ public class DepartmentRestController {
     }
 
     @GetMapping(params = "id")
-    @JsonView(Filter.DepartmentData.class)
     public ResponseEntity<Department> findById( @RequestParam("id") int id){
         return ResponseEntity.ok(departmentService.findById(id));
     }

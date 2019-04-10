@@ -1,10 +1,8 @@
 package se.lexicon.emil.CompanyManager.rest;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.forms.EmployeeForm;
 import se.lexicon.emil.CompanyManager.service.EmployeeService;
@@ -23,7 +21,6 @@ public class EmployeeRestController {
     }
 
     @GetMapping
-    @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<List<Employee>> findall() {
         List<Employee> employees = employeeService.findAll();
 
@@ -34,7 +31,6 @@ public class EmployeeRestController {
     }
 
     @GetMapping(params = "id")
-    @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<Employee> findById(@RequestParam("id") int employeeId) {
         try{
             return ResponseEntity.ok(employeeService.findById(employeeId));
@@ -44,7 +40,6 @@ public class EmployeeRestController {
     }
 
     @PostMapping
-    @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<List<Employee>> findByForm(@RequestBody EmployeeForm employeeForm){
         List<Employee> employees = employeeService.findByForm(employeeForm);
 
@@ -55,13 +50,11 @@ public class EmployeeRestController {
     }
 
     @PostMapping("/create")
-    @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeForm employeeForm){
         return ResponseEntity.ok(employeeService.createEmployee(employeeForm));
     }
 
     @PostMapping("/delete")
-    @JsonView(Filter.EmployeeData.class)
     public ResponseEntity<Employee> deleteEmployee(@RequestBody int employeeId){
         employeeService.deleteEmployee(employeeId);
         return ResponseEntity.ok().build();
