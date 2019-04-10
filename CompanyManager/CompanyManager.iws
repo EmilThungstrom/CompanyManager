@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="203314d3-4bf3-47a0-889a-8aefdbfd7662" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/CompanyManager.iws" beforeDir="false" afterPath="$PROJECT_DIR$/CompanyManager.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/entities/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/TeamRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/TeamRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/service/TeamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/Startup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/entities/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/entities/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/forms/EmployeeForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/forms/EmployeeForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/rest/EmployeeRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/se/lexicon/emil/CompanyManager/service/EmployeeServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,7 +32,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/TeamRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
+            <state relative-caret-position="250">
               <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -429,7 +418,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25958306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -440,12 +428,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966374" visible="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966374" weight="0.32841823" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003362" side_tool="true" weight="0.32841823" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3297587" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32841823" />
@@ -831,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/lexicon/emil/CompanyManager/rest/TeamRestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="250">
           <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />

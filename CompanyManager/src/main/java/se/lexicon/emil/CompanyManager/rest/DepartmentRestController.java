@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import se.lexicon.emil.CompanyManager.Filter;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.forms.DepartmentEmployeeForm;
-import se.lexicon.emil.CompanyManager.forms.DepartmentTeamForm;
+import se.lexicon.emil.CompanyManager.forms.TeamForm;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.util.List;
@@ -91,9 +91,9 @@ public class DepartmentRestController {
     }
 
     @PostMapping("/team/add")
-    public ResponseEntity addTeam(@RequestBody DepartmentTeamForm departmentTeamForm){
+    public ResponseEntity addTeam(@RequestBody TeamForm teamForm){
         try{
-            departmentService.addTeam(departmentTeamForm.departmentId);
+            departmentService.addTeam(teamForm.departmentId);
         }catch (IllegalArgumentException e){
             return ResponseEntity.badRequest().build();
         }
@@ -101,9 +101,9 @@ public class DepartmentRestController {
     }
 
     @PostMapping("/team/delete")
-    public ResponseEntity removeTeam(@RequestBody DepartmentTeamForm departmentTeamForm){
+    public ResponseEntity removeTeam(@RequestBody TeamForm teamForm){
         try{
-            departmentService.deleteTeam(departmentTeamForm.departmentId, departmentTeamForm.teamId);
+            departmentService.deleteTeam(teamForm.departmentId, teamForm.teamId);
         }catch (IllegalArgumentException e){
             return ResponseEntity.badRequest().build();
         }catch (IllegalAccessException e){
