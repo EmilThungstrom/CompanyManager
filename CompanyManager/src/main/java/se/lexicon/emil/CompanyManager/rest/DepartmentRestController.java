@@ -35,12 +35,7 @@ public class DepartmentRestController {
 
     @GetMapping(params = "name")
     public ResponseEntity<List<Department>> findByPartialName( @RequestParam("name") String departmentName){
-        List<Department> departments = departmentService.findByNameContaining(departmentName);
-
-        if(departments.isEmpty())
-            return ResponseEntity.noContent().build();
-        else
-            return ResponseEntity.ok(departments);
+        return ResponseEntity.ok(departmentService.findByNameContaining(departmentName));
     }
 
     @GetMapping(params = "id")
@@ -50,11 +45,7 @@ public class DepartmentRestController {
 
     @PostMapping("/delete")
     public ResponseEntity<Department> addDepartment(@RequestBody int id){
-        try{
-            departmentService.deleteDepartment(id);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
+        departmentService.deleteDepartment(id);
         return ResponseEntity.ok().build();
     }
 
@@ -65,45 +56,25 @@ public class DepartmentRestController {
 
     @PostMapping("/employee/assign")
     public ResponseEntity assignEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) {
-        try{
-            departmentService.assignEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
+        departmentService.assignEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/employee/delete")
-    public ResponseEntity removeEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) {
-        try{
-            departmentService.deleteEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }catch (IllegalAccessException e){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
+    public ResponseEntity removeEmployees(@RequestBody DepartmentEmployeeForm departmentEmployeeForm) throws IllegalAccessException{
+        departmentService.deleteEmployees(departmentEmployeeForm.departmentId, departmentEmployeeForm.employeeIds);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/team/add")
     public ResponseEntity addTeam(@RequestBody TeamForm teamForm){
-        try{
-            departmentService.addTeam(teamForm.departmentId);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
+        departmentService.addTeam(teamForm.departmentId);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/team/delete")
-    public ResponseEntity removeTeam(@RequestBody TeamForm teamForm){
-        try{
-            departmentService.deleteTeam(teamForm.departmentId, teamForm.teamId);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }catch (IllegalAccessException e){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
+    public ResponseEntity removeTeam(@RequestBody TeamForm teamForm) throws IllegalAccessException{
+        departmentService.deleteTeam(teamForm.departmentId, teamForm.teamId);
         return ResponseEntity.ok().build();
     }
 }

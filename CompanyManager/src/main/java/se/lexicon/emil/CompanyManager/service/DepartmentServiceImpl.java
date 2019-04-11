@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.entities.Team;
+import se.lexicon.emil.CompanyManager.exceptions.EntityNotFoundException;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
@@ -48,9 +49,8 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Department findById(int id) {
-        Optional<Department> result = departmentRepository.findById(id);
-        return result.orElseThrow(IllegalArgumentException::new);
+    public Department findById(int departmentId) {
+        return departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
     }
 
     @Override
@@ -61,29 +61,29 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public void deleteDepartment(int id) {
-        departmentRepository.delete(departmentRepository.findById(id).orElseThrow(IllegalArgumentException::new));
+    public void deleteDepartment(int departmentId) {
+        departmentRepository.delete(departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist.")));
     }
 
     @Override
     public void assignEmployees(int departmentId, int[] employeeIds) {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
 
         for(int id : employeeIds){
-            Employee employee = employeeRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+            Employee employee = employeeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("No employee with id: " + id + " exist."));
             employee.setDepartment(department);
         }
     }
 
     @Override
     public void deleteEmployees(int departmentId, int[] employeeIds) throws IllegalAccessException {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
 
         for(int id : employeeIds){
-            Employee employee = employeeRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+            Employee employee = employeeRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("No employee with id: " + id + " exist."));
 
             if(!employee.getDepartment().equals(department))
-                throw new IllegalAccessException();
+                throw new IllegalAccessException("Employee with id " + id + " does not belong to specified department");
 
             employeeRepository.delete(employee);
         }
@@ -91,18 +91,18 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     @Override
     public void addTeam(int departmentId) {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
         Team team = new Team(department, null);
         teamRepository.save(team);
     }
 
     @Override
     public void deleteTeam(int departmentId, int teamId) throws IllegalAccessException {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
-        Team team = teamRepository.findById(teamId).orElseThrow(IllegalArgumentException::new);
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
+        Team team = teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id: " + teamId + " exist."));
 
         if(!team.getDepartment().equals(department))
-            throw new IllegalAccessException();
+            throw new IllegalAccessException("Team with id " + teamId + " does not belong to specified department");
 
         teamRepository.delete(team);
     }

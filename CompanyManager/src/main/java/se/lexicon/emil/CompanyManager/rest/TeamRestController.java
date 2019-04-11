@@ -34,34 +34,16 @@ public class TeamRestController {
 
     @GetMapping(params = "teamId")
     public ResponseEntity<Team> findById(@RequestParam int teamId){
-        Team team = null;
-        try{
-            team = teamService.findById(teamId);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
-        return ResponseEntity.ok(team);
+        return ResponseEntity.ok(teamService.findById(teamId));
     }
 
     @GetMapping(params = "leaderId")
     public ResponseEntity<List<Team>> findByLeader(@RequestParam int leaderId){
-        List<Team> team = null;
-        try{
-            team = teamService.findByLeader(leaderId);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
-        return ResponseEntity.ok(team);
+        return ResponseEntity.ok(teamService.findByLeader(leaderId));
     }
 
     @GetMapping(params = "departmentId")
     public ResponseEntity<List<Team>> findByDepartment(@RequestParam int departmentId){
-        List<Team> team = null;
-        try{
-            team = teamService.findByDepartment(departmentId);
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.badRequest().build();
-        }
-        return ResponseEntity.ok(team);
+        return ResponseEntity.ok(teamService.findByDepartment(departmentId));
     }
 }

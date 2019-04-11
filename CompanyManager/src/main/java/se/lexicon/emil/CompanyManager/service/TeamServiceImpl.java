@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.entities.Team;
+import se.lexicon.emil.CompanyManager.exceptions.EntityNotFoundException;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
@@ -34,18 +35,18 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public List<Team> findByDepartment(int departmentId) {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(IllegalArgumentException::new);
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
         return teamRepository.findByDepartment(department);
     }
 
     @Override
-    public List<Team> findByLeader(int leaderId) {
-        Employee employee = employeeRepository.findById(leaderId).orElseThrow(IllegalArgumentException::new);
+    public List<Team> findByLeader(int employeeId) {
+        Employee employee = employeeRepository.findById(employeeId).orElseThrow(() -> new EntityNotFoundException("No employee with id: " + employeeId + " exist."));
         return teamRepository.findByLeader(employee);
     }
 
     @Override
-    public Team findById(int id) {
-        return teamRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+    public Team findById(int teamId) {
+        return teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id: " + teamId + " exist."));
     }
 }

@@ -32,11 +32,7 @@ public class EmployeeRestController {
 
     @GetMapping(params = "id")
     public ResponseEntity<Employee> findById(@RequestParam("id") int employeeId) {
-        try{
-            return ResponseEntity.ok(employeeService.findById(employeeId));
-        }catch (IllegalArgumentException e){
-            return ResponseEntity.noContent().build();
-        }
+        return ResponseEntity.ok(employeeService.findById(employeeId));
     }
 
     @PostMapping
