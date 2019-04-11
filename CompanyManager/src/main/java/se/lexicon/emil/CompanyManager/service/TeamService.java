@@ -13,6 +13,6 @@ public interface TeamService {
     Team findById(int id);
 
     void changeDepartment(int departmentId, int teamId);
-    void assignEmployees(int teamId, int[] employees);
-    void unassignEmployees(int teamId, int[] employees);
+    void assignEmployees(int teamId, int[] employeesIds) throws IllegalAccessException;
+    void unassignEmployees(int teamId, int[] employeesIds) throws IllegalAccessException;
 }

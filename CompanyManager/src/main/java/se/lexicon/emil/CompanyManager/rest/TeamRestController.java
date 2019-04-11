@@ -52,8 +52,14 @@ public class TeamRestController {
     }
 
     @PostMapping("/assign")
-    public ResponseEntity assignEmployees(@RequestBody TeamForm teamForm){
-        teamService.changeDepartment(teamForm.departmentId, teamForm.teamId);
+    public ResponseEntity assignEmployees(@RequestBody TeamForm teamForm) throws IllegalAccessException {
+        teamService.assignEmployees(teamForm.teamId, teamForm.employeeIds);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/unassign")
+    public ResponseEntity unassignEmployees(@RequestBody TeamForm teamForm) throws IllegalAccessException {
+        teamService.unassignEmployees(teamForm.teamId, teamForm.employeeIds);
         return ResponseEntity.ok().build();
     }
 }

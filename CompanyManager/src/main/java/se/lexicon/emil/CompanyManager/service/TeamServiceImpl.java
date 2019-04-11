@@ -11,6 +11,7 @@ import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -55,12 +56,38 @@ public class TeamServiceImpl extends AbstractService implements TeamService {
     }
 
     @Override
-    public void assignEmployees(int teamId, int[] employees) {
+    public void assignEmployees(int teamId, int[] employeesIds) throws IllegalAccessException {
+        Team team = getTeam(teamId);
+        Department department = team.getDepartment();
 
+        List<Employee> employees = new ArrayList<>();
+
+        for(int id : employeesIds){
+            Employee employee = getEmployee(id);
+
+            if(!department.equals(employee.getDepartment()))
+                throw new IllegalAccessException("Team department do not match specified employee's department");
+
+            employee.setTeam(team);
+            employees.add(employee);
+        }
+        employeeRepository.saveAll(employees);
     }
 
     @Override
-    public void unassignEmployees(int teamId, int[] employees) {
+    public void unassignEmployees(int teamId, int[] employeesIds) throws IllegalAccessException {
+        Team team = getTeam(teamId);
+        List<Employee> employees = new ArrayList<>();
 
+        for(int id : employeesIds){
+            Employee employee = getEmployee(id);
+
+            if(!team.equals(employee.getTeam()))
+                throw new IllegalAccessException("Employee with id " + id + " do not belong to the specified team");
+
+            employee.setTeam(null);
+            employees.add(employee);
+        }
+        employeeRepository.saveAll(employees);
     }
 }
