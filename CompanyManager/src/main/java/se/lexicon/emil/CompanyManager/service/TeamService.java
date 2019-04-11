@@ -11,4 +11,8 @@ public interface TeamService {
     List<Team> findByLeader(int leaderId);
 
     Team findById(int id);
+
+    void changeDepartment(int departmentId, int teamId);
+    void assignEmployees(int teamId, int[] employees);
+    void unassignEmployees(int teamId, int[] employees);
 }

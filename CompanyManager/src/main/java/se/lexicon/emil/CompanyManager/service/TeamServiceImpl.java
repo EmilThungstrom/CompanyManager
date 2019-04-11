@@ -47,6 +47,24 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public Team findById(int teamId) {
-        return teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id: " + teamId + " exist."));
+        return teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id " + teamId + " exist."));
+    }
+
+    @Override
+    public void changeDepartment(int departmentId, int teamId) {
+        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id " + departmentId + " exists."));
+        Team team = teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id " + teamId + " exist."));
+        team.setDepartment(department);
+        teamRepository.save(team);
+    }
+
+    @Override
+    public void assignEmployees(int teamId, int[] employees) {
+
+    }
+
+    @Override
+    public void unassignEmployees(int teamId, int[] employees) {
+
     }
 }
