@@ -76,6 +76,22 @@ public class EmployeeServiceImpl extends AbstractService implements EmployeeServ
     }
 
     @Override
+    public Employee updateEmployee(EmployeeForm employeeForm) {
+        Employee employee = getEmployee(employeeForm.employeeId);
+
+        if(employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
+            employee.setFirstName(employeeForm.getFirstName());
+        if(employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
+            employee.setLastName(employeeForm.getLastName());
+        if(employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
+            employee.setAddress(employeeForm.getAddress());
+        if(employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
+            employee.setEmail(employeeForm.getEmail());
+
+        return employeeRepository.save(employee);
+    }
+
+    @Override
     public void deleteEmployee(int employeeId) {
         employeeRepository.deleteById(employeeId);
     }

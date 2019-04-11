@@ -7,6 +7,7 @@ public class EmployeeForm {
     private String address;
     private String email;
 
+    public int employeeId;
     public int departmentId;
     public int teamId;
 
@@ -43,6 +44,7 @@ public class EmployeeForm {
     }
 
     private String formatString(String s){
-        return s.trim().toLowerCase().replaceFirst(s.substring(0,1), s.substring(0,1).toUpperCase());
+        s = s.trim().toLowerCase();
+        return s.replaceFirst(s.substring(0,1), s.substring(0,1).toUpperCase());
     }
 }

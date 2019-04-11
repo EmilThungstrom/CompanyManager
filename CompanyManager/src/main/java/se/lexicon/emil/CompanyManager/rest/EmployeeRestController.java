@@ -50,6 +50,11 @@ public class EmployeeRestController {
         return ResponseEntity.ok(employeeService.createEmployee(employeeForm));
     }
 
+    @PostMapping("/update")
+    public ResponseEntity<Employee> updateEmployee(@RequestBody EmployeeForm employeeForm){
+        return ResponseEntity.ok(employeeService.updateEmployee(employeeForm));
+    }
+
     @PostMapping("/delete")
     public ResponseEntity<Employee> deleteEmployee(@RequestBody int employeeId){
         employeeService.deleteEmployee(employeeId);

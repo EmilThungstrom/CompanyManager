@@ -13,5 +13,6 @@ public interface EmployeeService {
     Employee findById(int id);
 
     Employee createEmployee(EmployeeForm employeeForm);
+    Employee updateEmployee(EmployeeForm employeeForm);
     void deleteEmployee(int employeeId);
 }

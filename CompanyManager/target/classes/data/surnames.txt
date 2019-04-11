@@ -3,7 +3,8 @@ abbot
 abbott
 abdy
 ableson
-abney-hastings
+abney
+hastings
 abson
 abt 
 ackerley
@@ -63,7 +64,8 @@ allason
 allcock
 allen
 alley
-allgreen-ussing
+allgreen
+ussing
 allison
 allix
 allot
@@ -144,7 +146,8 @@ ashfield
 ashford
 ashley
 ashton
-ashton-glover
+ashton
+glover
 ashwell
 ashworth
 aske
@@ -209,7 +212,8 @@ baildon
 bailes
 bailey
 baillie
-baillie-hamilton
+baillie
+hamilton
 bain
 bainbridge
 bainbrigg
@@ -258,7 +262,8 @@ barkworth
 barlow
 barnard
 barnes
-barnes-austin
+barnes
+austin
 barnes baines?
 barnett
 barnhill
@@ -267,12 +272,14 @@ barnsley
 baron
 barr
 barraclough
-barradell-smith
+barradell
+smith
 barras
 barratt
 barret
 barrett
-barrett-lennard
+barrett
+lennard
 barrie
 barrington
 barroeta
@@ -320,7 +327,8 @@ bayley
 bayliffe
 baylis
 baylor
-bayne or anderson
+bayne
+anderson
 baynes
 beadle
 beadon
@@ -365,7 +373,8 @@ behymer
 belcher
 beldowski
 bell
-bell or hamilton
+bell
+hamilton
 bellamy
 bellard
 bellas
@@ -425,7 +434,8 @@ biddell
 biddle
 biggar
 biggs
-biggs or rigg
+biggs
+rigg
 bigham
 biglow
 bignell
@@ -521,7 +531,8 @@ bocock
 boddy
 bodily
 bodley
-bodley-mace
+bodley
+mace
 boehme
 boggs
 bohannon
@@ -539,7 +550,8 @@ bond
 bone
 bonetti
 bonnard
-bonnard or barnard
+bonnard
+barnard
 bonner
 bonnetta
 bonnington
@@ -552,10 +564,12 @@ bookter
 boon
 boone
 booth
-booth or boothby
+booth
+boothby
 boothby
 boothroyd
-bootle-wilbraham
+bootle
+wilbraham
 boraston
 bordley
 boreland
@@ -572,7 +586,8 @@ bossence
 bostin
 boston
 bosville
-bosville-macdonald
+bosville
+macdonald
 boswell
 boteler
 botham
@@ -592,8 +607,10 @@ bow
 bowen
 bower
 bowers
-bowes-lyon
-bowes or cowes
+bowes
+lyon
+bowes
+cowes
 bowett
 bowie
 bowker
@@ -646,7 +663,8 @@ branson
 branwhite
 bratby
 brauer
-braunschweig-wolfenbuettel
+braunschweig
+wolfenbuettel
 braunsheidel
 bray
 brayshaw
@@ -782,7 +800,8 @@ bunny
 bunyan
 burbridge
 burch
-burch-reynardson
+burch
+reynardson
 burchall
 burchell
 burdett
@@ -796,7 +815,8 @@ burgoyne
 burill
 burk
 burke
-burke-roche
+burke
+roche
 burkes
 burkhalter
 burkinshaw
@@ -821,7 +841,8 @@ burrow
 burrowes
 burrows
 burt
-burt or marryatt
+burt
+marryatt
 burton
 burtwhistle
 burwin
@@ -930,7 +951,8 @@ carnan
 carney
 carnochan
 carnon
-carolfield or cauffield
+carolfield
+cauffield
 carpenter
 carr
 carradice
@@ -974,7 +996,8 @@ cave
 caven
 cavender
 cavendish
-cavendish-bentink
+cavendish
+bentink
 cavers
 cavill
 cawkwell
@@ -1107,7 +1130,8 @@ cobb
 cobham
 coburn
 cocciardi
-cocciardi-milne
+cocciardi
+milne
 cochrane
 cock
 cockbone
@@ -1160,7 +1184,8 @@ combs
 common
 commons
 compton
-compton-hall
+compton
+hall
 conder
 congalton
 coniers
@@ -1181,9 +1206,11 @@ convery
 conway
 conyers
 cook
-cook or hodgkins
+cook
+hodgkins
 cooke
-cooke or cooper
+cooke
+cooper
 cookson
 cool
 cooling
@@ -1253,7 +1280,8 @@ courtney
 cousins
 cout
 coutts
-coutts-neville
+coutts
+neville
 covell
 covington
 cowan
@@ -1277,7 +1305,8 @@ crafton
 cragg
 craggs
 craig
-craig-harvey
+craig
+harvey
 craigie
 craik
 crain
@@ -1345,7 +1374,8 @@ crowther
 crowton
 croysier
 crozier
-cruix/cruik
+cruix
+cruik
 crummack
 crumpton
 cruse
@@ -1386,7 +1416,8 @@ curson
 curtain
 curtis
 curwen
-curzon-howe
+curzon
+howe
 custance
 cutburn
 cuthbert
@@ -1447,7 +1478,7 @@ dawes
 dawson
 dawtry
 day
-de-mouton
+de mouton
 de aldburgh
 de aldeburgh
 de bartzch
@@ -1554,7 +1585,9 @@ dickonson
 dickson
 didelot
 diggles
-digweed-miller-piper
+digweed
+miller
+piper
 dilahoy
 dill
 dillon
@@ -1666,7 +1699,8 @@ dudding
 dudenhoffer
 dudley
 duff
-duff or smith
+duff
+smith
 duffett
 duffie
 dufour
@@ -1746,10 +1780,12 @@ edmenson
 edmond
 edmonds
 edmondson
-edmondson or clifton
+edmondson
+clifton
 edmonson
 edmonstone
-edmund /wightman
+edmund
+wightman
 edmunds
 edmundson
 edna
@@ -1757,7 +1793,8 @@ edward
 edwards
 eeles
 egerton
-egerton-warburton
+egerton
+warburton
 eggleton
 egner
 eland
@@ -1782,7 +1819,9 @@ elley
 ellicott
 elling
 elliot
-elliot-murray-kynynmound
+elliot
+murray
+kynynmound
 elliott
 ellis
 ellison
@@ -1986,11 +2025,13 @@ fish
 fisher
 fishwick
 fitton
-fitz-hugh
+fitz
+hugh
 fitz hugh
 fitzcharles
 fitzgeorge
-fitzgeorge-hamilton
+fitzgeorge
+hamilton
 fitzgerald
 fitzgibbon
 fitzhugh
@@ -2029,7 +2070,8 @@ foot
 foote
 footer
 footes
-footes or footer
+footes
+footer
 forbes
 ford
 fordyce
@@ -2177,7 +2219,8 @@ geldart
 gell
 gelstorpe
 gent
-gent or grant
+gent
+grant
 gentle
 george
 georgii
@@ -2240,12 +2283,14 @@ glendinning
 glenn
 glisson
 glover
-glynne or aitken
+glynne
+aitken
 goad
 goddard
 godfrey
 godley
-godolphin-osborne
+godolphin
+osborne
 godolpin
 godophin
 godwin
@@ -2260,7 +2305,8 @@ golden
 golden\golding
 goldie
 golding
-golding or neely
+golding
+neely
 goldsmith
 goldstone
 goldstraw
@@ -2283,12 +2329,15 @@ goodison
 goodliff
 goodricke
 goodridge
-goodsell-johnson
+goodsell
+johnson
 goodwin
 goodyear
-goodyear /smith
+goodyear
+smith
 gordon
-gordon-lennox
+gordon
+lennox
 gore
 gorham
 gorin
@@ -2323,7 +2372,8 @@ graber
 grace
 graco
 graham
-graham or huddlestone
+graham
+huddlestone
 grainger
 gramett
 gramlich
@@ -2371,7 +2421,8 @@ gregson
 greig
 greives
 gresham
-greswolde-williams
+greswolde
+williams
 grey
 grieg
 grier
@@ -2547,7 +2598,8 @@ hartsock
 hartwell
 hartwich
 harvey
-harvey or verdich
+harvey
+verdich
 harvie
 harvill
 harvin
@@ -2561,7 +2613,8 @@ hastie
 hastings
 haszard
 hatch
-hatch or hatchet
+hatch
+hatchet
 hatchard
 hatchett
 hather
@@ -2616,7 +2669,8 @@ hearn
 hearne
 heath
 heathcote
-heathcote-hacker
+heathcote
+hacker
 heaton
 hebbard
 hebblethwait
@@ -2915,7 +2969,8 @@ hunt
 hunter
 hurley
 hurt
-hurt or harte
+hurt
+harte
 hussey
 husson
 hutcherson
@@ -2934,7 +2989,8 @@ hynd
 hyndman
 hynes
 hyslop
-hyslop or hyslop
+hyslop
+hyslop
 hyslop?
 hyson
 i
@@ -2997,7 +3053,8 @@ jagger
 jakes
 jalfon
 james
-james or jones
+james
+jones
 jameson
 jamieson
 jamison
@@ -3046,7 +3103,8 @@ johmson
 john
 johns
 johnson
-johnson-walsh
+johnson
+walsh
 johnston
 johnstone
 jolley
@@ -3060,7 +3118,8 @@ joy
 joynes
 jr
 jubb
-jubb or judd
+jubb
+judd
 judd
 judge
 judith
@@ -3108,11 +3167,13 @@ kellt
 kellum
 kelly
 kelsey
-kemmis-betty
+kemmis
+betty
 kemp
 kempsey
 kendal
-kendal or greenwood
+kendal
+greenwood
 kendall
 kendell
 kendrick
@@ -3123,7 +3184,8 @@ kennett
 kenney
 kennington
 kent
-kenyon-slaney
+kenyon
+slaney
 keppel
 kermath
 kernan
@@ -3212,7 +3274,8 @@ la franchi
 la manche
 la touche
 labidie
-lachney or lach
+lachney
+lach
 lackie
 lackland
 lacy
@@ -3261,7 +3324,8 @@ langridge
 langstaff
 langston
 langstreth
-langton or layman
+langton
+layman
 langtry
 lanham
 lansing
@@ -3273,11 +3337,13 @@ lapthorne
 larcum
 larkins
 larnach
-larnach-nevill
+larnach
+nevill
 laroche
 larson
 larter
-larway or stoner
+larway
+stoner
 lascelles
 laskey
 latham
@@ -3322,7 +3388,8 @@ league
 leah
 leake
 lean
-leane-silva
+leane
+silva
 learmont
 leathem
 leatherman
@@ -3360,7 +3427,8 @@ leonard
 leppington
 lerny
 leslie
-leslie-smith
+leslie
+smith
 lester
 letham
 lethbridge
@@ -3368,13 +3436,15 @@ letner
 letton
 leutner
 lever
-leveson-gower
+leveson
+gower
 levick
 leviston
 levitt
 lewie
 lewis
-lewis-swaffield
+lewis
+swaffield
 lewthwaite
 leybourne
 leyland
@@ -3443,7 +3513,8 @@ lockett
 lockey
 lockhart
 lockie
-lockie or locky
+lockie
+locky
 lockley
 lockridge
 lockwood
@@ -3454,7 +3525,8 @@ loftes
 loftis
 loftus
 logan
-logan-ellis
+logan
+ellis
 logie
 logwood
 lole
@@ -3630,9 +3702,10 @@ marchbanks
 marfleet
 margaret
 margetts
-maria /tompson
+tompson
 mariae
-marian /langhom
+marian
+langhom
 marion
 mariss
 marjasson
@@ -3642,7 +3715,8 @@ marks
 marksbury
 marland
 marler
-marler or martin
+marler
+martin
 marley
 marling
 marnie
@@ -3806,7 +3880,8 @@ mcguire
 mcguishen
 mchattie
 mcholm
-mchugh or james
+mchugh
+james
 mcintosh
 mcintyre
 mciveen
@@ -3906,8 +3981,10 @@ meadows
 meager
 meals
 meason
-mecklenburg-strelitz
-medaris or adams
+mecklenburg
+strelitz
+medaris
+adams
 medcalf
 meddows
 medhurst
@@ -4007,7 +4084,8 @@ moffat
 moffet
 moffett
 moffit
-moffit/moffat
+moffit
+moffat
 mogg
 mohan
 mohr
@@ -4016,7 +4094,8 @@ molde
 moltz
 monet
 money
-money-coutts
+money
+coutts
 money?
 monger
 monk
@@ -4029,7 +4108,8 @@ montagu
 montante
 monteith
 montgomery
-montgomery-campbell
+montgomery
+campbell
 montgomery campbell
 moodie
 moody
@@ -4058,7 +4138,8 @@ morin
 morisset
 morland
 morley
-mornington-jones
+mornington
+jones
 morphet
 morrell
 morris
@@ -4132,7 +4213,8 @@ n
 nabors
 naddox
 nance
-nancy /colquitt
+nancy
+colquitt
 nanson
 napier
 narry
@@ -4152,12 +4234,14 @@ neil
 neild
 neill
 neilson
-neilson-terry
+neilson
+terry
 neipp
 nellen
 nellon
 nelson
-nelson or nealso
+nelson
+nealso
 nenils
 nepton
 nessen
@@ -4309,8 +4393,9 @@ olver
 oneill
 onslow
 openshaw
-or enoch /bulford
-or james /mcgregor
+enoch
+bulford
+mcgregor
 orbell
 orchard
 ord
@@ -4331,11 +4416,14 @@ oswald
 other
 otley
 ott
-ott or ottaway
+ott
+ottaway
 otto
 otway
-otway-cave
-otway-ruthven
+otway
+cave
+otway
+ruthven
 otway cave
 ould
 outhwaite
@@ -4344,11 +4432,13 @@ over
 overend
 overington
 oversby
-oversby obersby or hubbersby
+oversby obersby
+hubbersby
 oversby obersby
 overton
 owen
-owen-swaffield
+owen
+swaffield
 owens
 oxley
 p
@@ -4356,7 +4446,8 @@ pace
 pack
 packard
 packer
-packer-doust
+packer
+doust
 paddleford
 paddon
 padgett
@@ -4419,7 +4510,8 @@ pavey
 pawlett
 pawley
 pawliczek
-paxman or paton
+paxman
+paton
 paxton
 payne
 peach
@@ -4475,7 +4567,8 @@ perry
 pert
 peter
 peters
-peters-hughes
+peters
+hughes
 petersen
 peterson
 pethick
@@ -4632,7 +4725,8 @@ prittie perry
 proby
 prockter
 procter
-procter-baines
+procter
+baines
 proctor
 proddow
 proud
@@ -4688,7 +4782,8 @@ raine
 rainer
 raines
 rainge
-raisen or raison
+raisen
+raison
 raison
 rajah
 rakestraw
@@ -4730,7 +4825,8 @@ ratliff
 raw
 rawcliff
 rawdon
-rawdon-hastings
+rawdon
+hastings
 rawlings
 rawlinson
 rawlyns
@@ -4873,7 +4969,8 @@ rollins
 rolt
 romig
 romilly
-romilly/pinchbeck
+romilly
+pinchbeck
 ronald
 ronnell
 rookard
@@ -4891,7 +4988,8 @@ rose
 roskelley
 roson
 ross
-ross-skudder
+ross
+skudder
 ross`
 rostron
 rotherfield
@@ -4954,7 +5052,8 @@ ryal
 ryall
 ryan
 rycroft
-rycroft or mcglasson
+rycroft
+mcglasson
 rydalch
 rydall
 ryder
@@ -4963,10 +5062,13 @@ ryland
 ryle
 ryrie
 ryther
-s
-s-c gotha
-sachsen-coburg-saalfeld
-sachsen-gotha-altenburg
+gotha
+sachsen
+coburg
+saalfeld
+sachsen
+gotha
+altenburg
 sackett
 sackville
 saddler
@@ -4996,7 +5098,8 @@ sandham
 sandiford
 sandler
 sandys
-sandys-lumsdaine
+sandys
+lumsdaine
 sanford
 sangster
 sapcote
@@ -5032,7 +5135,10 @@ schedewick
 schei
 schenick
 scherger
-schleswig-holstein-sonderburg-gluecksburg
+schleswig
+holstein
+sonderburg
+gluecksburg
 schmidt
 schneider
 schoenheide
@@ -5202,7 +5308,8 @@ simons
 simpson
 simpson?
 sims
-sims or penn
+sims
+penn
 sinclair
 singer
 singleton
@@ -5253,14 +5360,17 @@ smedley
 smellie
 smillie
 smith
-smith-rense
+smith
+rense
 smith?
 smithies
 smithson
 smorthwaite
 smyth
-smyth or smijth
-smyth or smith
+smyth
+smijth
+smyth
+smith
 smythe
 snary
 snavely
@@ -5278,7 +5388,8 @@ snyder
 socket
 sofiano
 softley
-softley-stubbs
+softley
+stubbs
 sohrweide
 solley
 somerford
@@ -5321,7 +5432,8 @@ spedding
 speight
 spence
 spencer
-spencer-churchill
+spencer
+churchill
 sperry
 spiceland
 spicer
@@ -5371,7 +5483,8 @@ stansfield
 stanwix
 staples
 stapleton
-stapleton-cotton
+stapleton
+cotton
 stapley
 stark
 starkey
@@ -5406,7 +5519,8 @@ still
 stillie
 stilwell
 stimson
-stinman or sunman
+stinman
+sunman
 stinson
 stinton
 stirling
@@ -5486,7 +5600,9 @@ sutch
 sutcliffe
 sutheran
 sutherland
-sutherland-leveson-gower
+sutherland
+leveson
+gower
 suttle
 sutton
 swaffield
@@ -5574,7 +5690,8 @@ teck
 tedford
 telfar
 telfer
-telfer/telford
+telfer
+telford
 temperton
 temple
 templeton
@@ -5584,7 +5701,8 @@ tennant
 tennessee
 terhune
 terry
-terry-lewis
+terry
+lewis
 tessequeau
 tesseyman
 tetley
@@ -5644,7 +5762,8 @@ tidwell
 tierney
 tighe
 tilden
-till or tilley
+till
+tilley
 tillotson
 tilney
 timms
@@ -5656,7 +5775,8 @@ titcomb
 titterington
 tobias
 todd
-todd-naylor
+todd
+naylor
 todhunter
 tolbert
 tole
@@ -5714,7 +5834,8 @@ trench
 trendall
 trevannion
 trevor
-trevor-roper
+trevor
+roper
 trickett
 trigg
 triplett
@@ -5723,7 +5844,8 @@ tristram
 trogton
 trollope
 trotter
-trotter-cranstoun
+trotter
+cranstoun
 troup
 troutman
 trowbridge
@@ -5762,8 +5884,10 @@ tuttle
 twedale
 tweddell
 tweedale
-tweedale or tayl
-tweedale/rhodes
+tweedale
+tayl
+tweedale
+rhodes
 twidale
 twiname
 twining
@@ -5823,7 +5947,8 @@ van valen
 vance
 vandeput
 vane
-vane-tempest
+vane
+tempest
 vanhorne
 vanover
 vansickle
@@ -5842,7 +5967,8 @@ vavasour
 veach
 veepon
 veitch
-veitch or veileh
+veitch
+veileh
 venables
 venn
 venus
@@ -5862,7 +5988,8 @@ vinas
 vince
 vincent
 vine
-vine-hall
+vine
+hall
 viner
 vinicomb
 vining
@@ -5871,9 +5998,12 @@ vinter
 virgin
 vizor
 vogt
-von brandenburg-ansbach
-von braunschweig-luneburg
-von nassau-dillenberg
+von brandenburg
+ansbach
+von braunschweig
+luneburg
+von nassau
+dillenberg
 vraithwaite
 w
 wacher
@@ -5971,11 +6101,13 @@ watherston
 watkins
 watkinson
 watson
-watson-wentworth
+watson
+wentworth
 watson walker
 watson alias law
 watt
-watt or carleton
+watt
+carleton
 watters
 watterson
 watts
@@ -6001,7 +6133,8 @@ webber
 weber
 webster
 wedge
-wegg or wagg
+wegg
+wagg
 weidenmeyer
 weighell
 weinholt
@@ -6026,7 +6159,8 @@ wentz
 wenzell
 werschky
 wesley
-wesley-pole
+wesley
+pole
 west
 westaby
 westall
@@ -6048,7 +6182,8 @@ whalley
 whally
 wharram
 wharton
-whately-smith
+whately
+smith
 whatley
 whatmough
 wheatley
@@ -6080,7 +6215,8 @@ whiteside
 whitesides
 whitfield
 whiting
-whiting-harrison
+whiting
+harrison
 whitledge
 whitley
 whitlock or
@@ -6088,10 +6224,12 @@ whitmire
 whitmore
 whittaker
 whittemore
-whitting-griffin
+whitting
+griffin
 whittington
 whittle
-whittle or whittler
+whittle
+whittler
 whittleor whittler
 whitwell
 whitworth
@@ -6151,7 +6289,8 @@ willy
 wilmoth
 wilshire
 wilson
-wilson-barkworth
+wilson
+barkworth
 wilstrop
 wilton
 winder
@@ -6198,7 +6337,7 @@ wolski
 womble
 womersley
 wood
-wood   of  buckb
+wood of buck
 woodall
 woodard
 woodbridge
@@ -6249,8 +6388,6 @@ wrigley
 wriothesley
 wroughton
 wyatt
-wyatt-edgell
-wyatt-smith
 wyatville
 wyche
 wydevill
@@ -6268,7 +6405,8 @@ y
 yair
 yarbrough
 yardley
-yardley or cooper
+yardley
+cooper
 yare
 yarker
 yates
