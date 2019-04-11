@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.entities.Team;
-import se.lexicon.emil.CompanyManager.exceptions.EntityNotFoundException;
 import se.lexicon.emil.CompanyManager.forms.EmployeeForm;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
@@ -18,11 +17,7 @@ import java.util.stream.Stream;
 
 @Service
 @Transactional
-public class EmployeeServiceImpl implements EmployeeService {
-
-    EmployeeRepository employeeRepository;
-    TeamRepository teamRepository;
-    DepartmentRepository departmentRepository;
+public class EmployeeServiceImpl extends AbstractService implements EmployeeService {
 
     @Autowired
     public EmployeeServiceImpl(EmployeeRepository employeeRepository, TeamRepository teamRepository, DepartmentRepository departmentRepository) {
@@ -42,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findById(int employeeId) {
-        return employeeRepository.findById(employeeId).orElseThrow(() -> new EntityNotFoundException("No employee with id: " + employeeId + " exist."));
+        return getEmployee(employeeId);
     }
 
     @Override
@@ -70,11 +65,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         Team team = null;
         if(employeeForm.teamId > 0)
-            team = teamRepository.findById(employeeForm.teamId).orElseThrow(() -> new EntityNotFoundException("No team with id: " + employeeForm.teamId + " exist."));
+            team = getTeam(employeeForm.teamId);
 
         Department department = null;
         if(employeeForm.departmentId > 0)
-            department = departmentRepository.findById(employeeForm.departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + employeeForm.departmentId + " exist."));
+            department = getDepartment(employeeForm.departmentId);
 
         Employee employee = new Employee(employeeForm.getFirstName(), employeeForm.getLastName(), employeeForm.getAddress(), employeeForm.getEmail(), team, department);
         return employeeRepository.save(employee);

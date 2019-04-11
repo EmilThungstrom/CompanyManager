@@ -50,4 +50,10 @@ public class TeamRestController {
         teamService.changeDepartment(teamForm.departmentId, teamForm.teamId);
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/assign")
+    public ResponseEntity assignEmployees(@RequestBody TeamForm teamForm){
+        teamService.changeDepartment(teamForm.departmentId, teamForm.teamId);
+        return ResponseEntity.ok().build();
+    }
 }

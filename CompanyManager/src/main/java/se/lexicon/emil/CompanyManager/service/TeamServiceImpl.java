@@ -15,11 +15,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class TeamServiceImpl implements TeamService {
-
-    DepartmentRepository departmentRepository;
-    EmployeeRepository employeeRepository;
-    TeamRepository teamRepository;
+public class TeamServiceImpl extends AbstractService implements TeamService {
 
     @Autowired
     public TeamServiceImpl(DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, TeamRepository teamRepository) {
@@ -35,25 +31,25 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public List<Team> findByDepartment(int departmentId) {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id: " + departmentId + " exist."));
+        Department department = getDepartment(departmentId);
         return teamRepository.findByDepartment(department);
     }
 
     @Override
     public List<Team> findByLeader(int employeeId) {
-        Employee employee = employeeRepository.findById(employeeId).orElseThrow(() -> new EntityNotFoundException("No employee with id: " + employeeId + " exist."));
+        Employee employee = getEmployee(employeeId);
         return teamRepository.findByLeader(employee);
     }
 
     @Override
     public Team findById(int teamId) {
-        return teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id " + teamId + " exist."));
+        return getTeam(teamId);
     }
 
     @Override
     public void changeDepartment(int departmentId, int teamId) {
-        Department department = departmentRepository.findById(departmentId).orElseThrow(() -> new EntityNotFoundException("No department with id " + departmentId + " exists."));
-        Team team = teamRepository.findById(teamId).orElseThrow(() -> new EntityNotFoundException("No team with id " + teamId + " exist."));
+        Department department = getDepartment(departmentId);
+        Team team = getTeam(teamId);
         team.setDepartment(department);
         teamRepository.save(team);
     }
