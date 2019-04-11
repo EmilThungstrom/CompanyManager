@@ -8,11 +8,14 @@ import java.util.List;
 public interface EmployeeService {
 
     List<Employee> findAll();
+
     List<Employee> findByForm(EmployeeForm employeeForm);
 
     Employee findById(int id);
 
     Employee createEmployee(EmployeeForm employeeForm);
+
     Employee updateEmployee(EmployeeForm employeeForm);
+
     void deleteEmployee(int employeeId);
 }

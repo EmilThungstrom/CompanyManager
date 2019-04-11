@@ -39,7 +39,7 @@ public class Team {
         this.leader = leader;
     }
 
-    protected Team(){
+    protected Team() {
 
     }
 
@@ -63,7 +63,9 @@ public class Team {
         this.leader = leader;
     }
 
-    public List<Employee> getMembers() { return members; }
+    public List<Employee> getMembers() {
+        return members;
+    }
 
     public void setMembers(List<Employee> members) {
         this.members = members;

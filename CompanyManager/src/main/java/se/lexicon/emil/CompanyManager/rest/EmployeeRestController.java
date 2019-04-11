@@ -24,7 +24,7 @@ public class EmployeeRestController {
     public ResponseEntity<List<Employee>> findall() {
         List<Employee> employees = employeeService.findAll();
 
-        if(employees.isEmpty())
+        if (employees.isEmpty())
             return ResponseEntity.noContent().build();
         else
             return ResponseEntity.ok(employeeService.findAll());
@@ -36,27 +36,27 @@ public class EmployeeRestController {
     }
 
     @PostMapping
-    public ResponseEntity<List<Employee>> findByForm(@RequestBody EmployeeForm employeeForm){
+    public ResponseEntity<List<Employee>> findByForm(@RequestBody EmployeeForm employeeForm) {
         List<Employee> employees = employeeService.findByForm(employeeForm);
 
-        if(employees.isEmpty())
+        if (employees.isEmpty())
             return ResponseEntity.noContent().build();
 
         return ResponseEntity.ok(employees);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeForm employeeForm){
+    public ResponseEntity<Employee> createEmployee(@RequestBody EmployeeForm employeeForm) {
         return ResponseEntity.ok(employeeService.createEmployee(employeeForm));
     }
 
     @PostMapping("/update")
-    public ResponseEntity<Employee> updateEmployee(@RequestBody EmployeeForm employeeForm){
+    public ResponseEntity<Employee> updateEmployee(@RequestBody EmployeeForm employeeForm) {
         return ResponseEntity.ok(employeeService.updateEmployee(employeeForm));
     }
 
     @PostMapping("/delete")
-    public ResponseEntity<Employee> deleteEmployee(@RequestBody int employeeId){
+    public ResponseEntity<Employee> deleteEmployee(@RequestBody int employeeId) {
         employeeService.deleteEmployee(employeeId);
         return ResponseEntity.ok().build();
     }

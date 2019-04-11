@@ -10,5 +10,6 @@ import java.util.List;
 public interface TeamRepository extends CrudRepository<Team, Integer> {
 
     List<Team> findByLeader(Employee employee);
+
     List<Team> findByDepartment(Department department);
 }

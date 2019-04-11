@@ -31,7 +31,7 @@ public class DepartmentRepositoryTest {
     private Employee testHead;
 
     @Before
-    public void init(){
+    public void init() {
 
         Employee employee1 = new Employee("Fist1", "Last1", "adress1", "email1", null, null);
         Employee employee2 = new Employee("Fist2", "Last2", "adress2", "email2", null, null);
@@ -52,14 +52,14 @@ public class DepartmentRepositoryTest {
     }
 
     @Test
-    public void test_FindByName(){
+    public void test_FindByName() {
         List<Department> expected = Arrays.asList(testDepartment);
         List<Department> actual = departmentRepository.findByNameContaining("department1");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_FindByHead(){
+    public void test_FindByHead() {
         List<Department> expected = Arrays.asList(testDepartment);
         List<Department> actual = departmentRepository.findByHead(testHead);
         assertEquals(expected, actual);

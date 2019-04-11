@@ -36,7 +36,7 @@ public class EmployeeRepositoryTest {
     private Team testTeam;
 
     @Before
-    public void init(){
+    public void init() {
 
         Department department1 = new Department("department1", null);
         Department department2 = new Department("department2", null);
@@ -62,48 +62,42 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    public void test_GetByFirstName()
-    {
+    public void test_GetByFirstName() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByFirstNameIgnoreCase("First1");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_GetByLastName()
-    {
+    public void test_GetByLastName() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByLastNameIgnoreCase("Last1");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_GetByAddress()
-    {
+    public void test_GetByAddress() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByAddressIgnoreCase("address1");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_GetByEmail()
-    {
+    public void test_GetByEmail() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByEmailIgnoreCase("email1");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_GetByDepartment()
-    {
+    public void test_GetByDepartment() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByDepartment(testDepartment);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_GetByTeam()
-    {
+    public void test_GetByTeam() {
         List<Employee> expected = Arrays.asList(testEmployee);
         List<Employee> actual = employeeRepository.findByTeam(testTeam);
         assertEquals(expected, actual);

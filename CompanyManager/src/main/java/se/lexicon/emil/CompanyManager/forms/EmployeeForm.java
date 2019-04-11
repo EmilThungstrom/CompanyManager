@@ -43,8 +43,8 @@ public class EmployeeForm {
         this.email = email.trim().toLowerCase();
     }
 
-    private String formatString(String s){
+    private String formatString(String s) {
         s = s.trim().toLowerCase();
-        return s.replaceFirst(s.substring(0,1), s.substring(0,1).toUpperCase());
+        return s.replaceFirst(s.substring(0, 1), s.substring(0, 1).toUpperCase());
     }
 }

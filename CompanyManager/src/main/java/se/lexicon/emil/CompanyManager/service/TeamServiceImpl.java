@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.entities.Team;
-import se.lexicon.emil.CompanyManager.exceptions.EntityNotFoundException;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
@@ -62,10 +61,10 @@ public class TeamServiceImpl extends AbstractService implements TeamService {
 
         List<Employee> employees = new ArrayList<>();
 
-        for(int id : employeesIds){
+        for (int id : employeesIds) {
             Employee employee = getEmployee(id);
 
-            if(!department.equals(employee.getDepartment()))
+            if (!department.equals(employee.getDepartment()))
                 throw new IllegalAccessException("Team department do not match specified employee's department");
 
             employee.setTeam(team);
@@ -79,10 +78,10 @@ public class TeamServiceImpl extends AbstractService implements TeamService {
         Team team = getTeam(teamId);
         List<Employee> employees = new ArrayList<>();
 
-        for(int id : employeesIds){
+        for (int id : employeesIds) {
             Employee employee = getEmployee(id);
 
-            if(!team.equals(employee.getTeam()))
+            if (!team.equals(employee.getTeam()))
                 throw new IllegalAccessException("Employee with id " + id + " do not belong to the specified team");
 
             employee.setTeam(null);

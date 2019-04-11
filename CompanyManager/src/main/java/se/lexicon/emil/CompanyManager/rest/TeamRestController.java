@@ -21,32 +21,32 @@ public class TeamRestController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Team>> findAll(){
+    public ResponseEntity<List<Team>> findAll() {
         List<Team> teams = teamService.findAll();
 
-        if(teams.isEmpty())
+        if (teams.isEmpty())
             return ResponseEntity.noContent().build();
 
         return ResponseEntity.ok(teams);
     }
 
     @GetMapping(params = "teamId")
-    public ResponseEntity<Team> findById(@RequestParam int teamId){
+    public ResponseEntity<Team> findById(@RequestParam int teamId) {
         return ResponseEntity.ok(teamService.findById(teamId));
     }
 
     @GetMapping(params = "leaderId")
-    public ResponseEntity<List<Team>> findByLeader(@RequestParam int leaderId){
+    public ResponseEntity<List<Team>> findByLeader(@RequestParam int leaderId) {
         return ResponseEntity.ok(teamService.findByLeader(leaderId));
     }
 
     @GetMapping(params = "departmentId")
-    public ResponseEntity<List<Team>> findByDepartment(@RequestParam int departmentId){
+    public ResponseEntity<List<Team>> findByDepartment(@RequestParam int departmentId) {
         return ResponseEntity.ok(teamService.findByDepartment(departmentId));
     }
 
     @PostMapping("/change")
-    public ResponseEntity changeDepartment(@RequestBody TeamForm teamForm){
+    public ResponseEntity changeDepartment(@RequestBody TeamForm teamForm) {
         teamService.changeDepartment(teamForm.departmentId, teamForm.teamId);
         return ResponseEntity.ok().build();
     }

@@ -9,6 +9,7 @@ import java.util.List;
 public interface DepartmentRepository extends CrudRepository<Department, Integer> {
 
     List<Department> findByNameContaining(String name);
+
     List<Department> findByHead(Employee head);
 
 }

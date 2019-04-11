@@ -42,7 +42,7 @@ public class Startup {
     }
 
     @EventListener(ApplicationReadyEvent.class)
-    public void doAfterStartup(){
+    public void doAfterStartup() {
         Department hr = departmentRepository.save(new Department("Human Resources", null));
         Department dev = departmentRepository.save(new Department("Development", null));
         Department res = departmentRepository.save(new Department("Research", null));
@@ -65,8 +65,8 @@ public class Startup {
         int[] minEmployees = {1, 50, 10, 5, 10};
         Department department = null;
         Team team = null;
-        for(int i = 0; i < 5; i++){
-            switch(i){
+        for (int i = 0; i < 5; i++) {
+            switch (i) {
                 case 0:
                     department = hr;
                     break;
@@ -85,9 +85,9 @@ public class Startup {
             }
             team = createTeam(department);
 
-            for(int j = 0, k = 0; j < minEmployees[i] + random.nextInt(maxRandomEmployees[i]); j++, k++){
+            for (int j = 0, k = 0; j < minEmployees[i] + random.nextInt(maxRandomEmployees[i]); j++, k++) {
                 Employee employee = createEmployee(department, team);
-                if(k > 5 && random.nextBoolean()) {
+                if (k > 5 && random.nextBoolean()) {
                     team = createTeam(department);
                     k = 0;
                 }
@@ -95,14 +95,14 @@ public class Startup {
         }
     }
 
-    private Employee createEmployee(Department department, Team team){
+    private Employee createEmployee(Department department, Team team) {
         String name = names.get(random.nextInt(names.size()));
         String surname = surnames.get(random.nextInt(surnames.size()));
         String address = places.get(random.nextInt(surnames.size())).concat(" " + random.nextInt(100));
 
-        name = name.replaceFirst(name.substring(0,1), name.substring(0,1).toUpperCase());
-        surname = surname.replaceFirst(surname.substring(0,1), surname.substring(0,1).toUpperCase());
-        address = address.replaceFirst(address.substring(0,1), address.substring(0,1).toUpperCase());
+        name = name.replaceFirst(name.substring(0, 1), name.substring(0, 1).toUpperCase());
+        surname = surname.replaceFirst(surname.substring(0, 1), surname.substring(0, 1).toUpperCase());
+        address = address.replaceFirst(address.substring(0, 1), address.substring(0, 1).toUpperCase());
 
         System.out.println(name + "." + surname.replaceAll(" ", "") + "@" + department.getName().replaceAll(" ", "") + ".net");
         return employeeRepository.save(
@@ -111,7 +111,7 @@ public class Startup {
                         , team, department));
     }
 
-    private Team createTeam(Department department){
+    private Team createTeam(Department department) {
         Team team = teamRepository.save(new Team(department, null));
         Employee employee = createEmployee(department, team);
         team.setLeader(employee);

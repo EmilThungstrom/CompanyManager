@@ -13,7 +13,7 @@ import java.util.Map;
 public class RestExceptionHandler {
 
     @ExceptionHandler(value = EntityNotFoundException.class)
-    protected ResponseEntity<Map<String, Object>> entityNotFoundException(EntityNotFoundException ex){
+    protected ResponseEntity<Map<String, Object>> entityNotFoundException(EntityNotFoundException ex) {
         Map<String, Object> errors = new HashMap<>();
         errors.put("timestamp", LocalDateTime.now());
         errors.put("message", ex.getMessage());
@@ -22,7 +22,7 @@ public class RestExceptionHandler {
     }
 
     @ExceptionHandler(value = IllegalAccessException.class)
-    protected ResponseEntity<Map<String, Object>> entityNotFoundException(IllegalAccessException ex){
+    protected ResponseEntity<Map<String, Object>> entityNotFoundException(IllegalAccessException ex) {
         Map<String, Object> errors = new HashMap<>();
         errors.put("timestamp", LocalDateTime.now());
         errors.put("message", ex.getMessage());

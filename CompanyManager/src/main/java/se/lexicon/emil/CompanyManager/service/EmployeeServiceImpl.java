@@ -42,19 +42,19 @@ public class EmployeeServiceImpl extends AbstractService implements EmployeeServ
 
     @Override
     public List<Employee> findByForm(EmployeeForm employeeForm) {
-        Stream<Employee> employeeStream = ((List<Employee>)employeeRepository.findAll()).stream();
+        Stream<Employee> employeeStream = ((List<Employee>) employeeRepository.findAll()).stream();
 
-        if(employeeForm.departmentId > 0)
+        if (employeeForm.departmentId > 0)
             employeeStream = employeeStream.filter(employee -> employee.getDepartment().getId() == employeeForm.departmentId);
-        if(employeeForm.teamId > 0)
+        if (employeeForm.teamId > 0)
             employeeStream = employeeStream.filter(employee -> employee.getTeam().getId() == employeeForm.teamId);
-        if(employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
+        if (employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getFirstName().equalsIgnoreCase(employeeForm.getFirstName()));
-        if(employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
+        if (employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getLastName().equalsIgnoreCase(employeeForm.getLastName()));
-        if(employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
+        if (employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getAddress().equalsIgnoreCase(employeeForm.getAddress()));
-        if(employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
+        if (employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getEmail().equalsIgnoreCase(employeeForm.getEmail()));
 
         return employeeStream.collect(Collectors.toList());
@@ -64,11 +64,11 @@ public class EmployeeServiceImpl extends AbstractService implements EmployeeServ
     public Employee createEmployee(EmployeeForm employeeForm) {
 
         Team team = null;
-        if(employeeForm.teamId > 0)
+        if (employeeForm.teamId > 0)
             team = getTeam(employeeForm.teamId);
 
         Department department = null;
-        if(employeeForm.departmentId > 0)
+        if (employeeForm.departmentId > 0)
             department = getDepartment(employeeForm.departmentId);
 
         Employee employee = new Employee(employeeForm.getFirstName(), employeeForm.getLastName(), employeeForm.getAddress(), employeeForm.getEmail(), team, department);
@@ -79,13 +79,13 @@ public class EmployeeServiceImpl extends AbstractService implements EmployeeServ
     public Employee updateEmployee(EmployeeForm employeeForm) {
         Employee employee = getEmployee(employeeForm.employeeId);
 
-        if(employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
+        if (employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
             employee.setFirstName(employeeForm.getFirstName());
-        if(employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
+        if (employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
             employee.setLastName(employeeForm.getLastName());
-        if(employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
+        if (employeeForm.getAddress() != null && !employeeForm.getAddress().isEmpty())
             employee.setAddress(employeeForm.getAddress());
-        if(employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
+        if (employeeForm.getEmail() != null && !employeeForm.getEmail().isEmpty())
             employee.setEmail(employeeForm.getEmail());
 
         return employeeRepository.save(employee);

@@ -37,7 +37,7 @@ public class TeamRepositoryTest {
     private Department testDepartment;
 
     @Before
-    public void init(){
+    public void init() {
 
         Employee employee1 = new Employee("Fist1", "Last1", "adress1", "email1", null, null);
         Employee employee2 = new Employee("Fist2", "Last2", "adress2", "email2", null, null);
@@ -58,20 +58,20 @@ public class TeamRepositoryTest {
 
         Team team1 = new Team(department1, employee1);
         Team team2 = new Team(department2, employee2);
-        
+
         testTeam = teamRepository.save(team1);
         teamRepository.save(team2);
     }
 
     @Test
-    public void test_FindByLeader(){
+    public void test_FindByLeader() {
         List<Team> expected = Arrays.asList(testTeam);
         List<Team> actual = teamRepository.findByLeader(testLeader);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_FindByDepartment(){
+    public void test_FindByDepartment() {
         List<Team> expected = Arrays.asList(testTeam);
         List<Team> actual = teamRepository.findByDepartment(testDepartment);
         assertEquals(expected, actual);

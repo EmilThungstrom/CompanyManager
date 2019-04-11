@@ -43,7 +43,7 @@ public class Department {
         this.head = head;
     }
 
-    protected Department(){
+    protected Department() {
 
     }
 

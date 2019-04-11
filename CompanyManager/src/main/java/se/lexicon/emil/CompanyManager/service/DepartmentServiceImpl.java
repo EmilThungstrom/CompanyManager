@@ -6,17 +6,15 @@ import org.springframework.transaction.annotation.Transactional;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;
 import se.lexicon.emil.CompanyManager.entities.Team;
-import se.lexicon.emil.CompanyManager.exceptions.EntityNotFoundException;
 import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
 import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Transactional
-public class DepartmentServiceImpl extends AbstractService implements DepartmentService{
+public class DepartmentServiceImpl extends AbstractService implements DepartmentService {
 
     @Autowired
     public DepartmentServiceImpl(DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, TeamRepository teamRepository) {
@@ -65,7 +63,7 @@ public class DepartmentServiceImpl extends AbstractService implements Department
     public void assignEmployees(int departmentId, int[] employeeIds) {
         Department department = getDepartment(departmentId);
 
-        for(int id : employeeIds){
+        for (int id : employeeIds) {
             Employee employee = getEmployee(id);
             employee.setDepartment(department);
         }
@@ -75,10 +73,10 @@ public class DepartmentServiceImpl extends AbstractService implements Department
     public void deleteEmployees(int departmentId, int[] employeeIds) throws IllegalAccessException {
         Department department = getDepartment(departmentId);
 
-        for(int id : employeeIds){
+        for (int id : employeeIds) {
             Employee employee = getEmployee(id);
 
-            if(!employee.getDepartment().equals(department))
+            if (!employee.getDepartment().equals(department))
                 throw new IllegalAccessException("Employee with id " + id + " does not belong to specified department");
 
             employeeRepository.delete(employee);
@@ -97,7 +95,7 @@ public class DepartmentServiceImpl extends AbstractService implements Department
         Department department = getDepartment(departmentId);
         Team team = getTeam(teamId);
 
-        if(!team.getDepartment().equals(department))
+        if (!team.getDepartment().equals(department))
             throw new IllegalAccessException("Team with id " + teamId + " does not belong to specified department");
 
         teamRepository.delete(team);
