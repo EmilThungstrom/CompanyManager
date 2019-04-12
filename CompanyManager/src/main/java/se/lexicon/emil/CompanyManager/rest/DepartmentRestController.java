@@ -42,15 +42,15 @@ public class DepartmentRestController {
         return ResponseEntity.ok(departmentService.findById(id));
     }
 
-    @PostMapping("/delete")
-    public ResponseEntity<Department> addDepartment(@RequestBody int id) {
-        departmentService.deleteDepartment(id);
-        return ResponseEntity.ok().build();
-    }
-
     @PostMapping("/create")
     public ResponseEntity<Department> createDepartment(@RequestBody String name) {
-        return ResponseEntity.ok(departmentService.addDepartment(name));
+        return ResponseEntity.ok(departmentService.createDepartment(name));
+    }
+
+    @PostMapping("/delete")
+    public ResponseEntity<Department> deleteDepartment(@RequestBody int id) {
+        departmentService.deleteDepartment(id);
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/employee/assign")

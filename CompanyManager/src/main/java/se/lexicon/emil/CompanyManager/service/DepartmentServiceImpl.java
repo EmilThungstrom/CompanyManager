@@ -48,7 +48,7 @@ public class DepartmentServiceImpl extends AbstractService implements Department
     }
 
     @Override
-    public Department addDepartment(String departmentName) {
+    public Department createDepartment(String departmentName) {
         Department department = new Department(departmentName, null);
 
         return departmentRepository.save(department);

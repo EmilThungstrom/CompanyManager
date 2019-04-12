@@ -13,11 +13,7 @@ import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
 import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 @Component
 @Transactional
@@ -31,14 +27,9 @@ public class Startup {
     private EmployeeRepository employeeRepository;
 
     private Random random = new Random();
-    private List<String> names;
-    private List<String> surnames;
-    private List<String> places;
+    private EntityGeneration entityGeneration = new EntityGeneration();
 
     public Startup() throws IOException {
-        names = Files.lines(Paths.get(getClass().getClassLoader().getResource("data/names.txt").getFile())).collect(Collectors.toList());
-        surnames = Files.lines(Paths.get(getClass().getClassLoader().getResource("data/surnames.txt").getFile())).collect(Collectors.toList());
-        places = Files.lines(Paths.get(getClass().getClassLoader().getResource("data/places.txt").getFile())).collect(Collectors.toList());
     }
 
     @EventListener(ApplicationReadyEvent.class)
@@ -49,11 +40,11 @@ public class Startup {
         Department mark = departmentRepository.save(new Department("Marketing", null));
         Department maint = departmentRepository.save(new Department("Maintenance", null));
 
-        Employee headHR = createEmployee(hr, null);
-        Employee headDev = createEmployee(dev, null);
-        Employee headRes = createEmployee(res, null);
-        Employee headMark = createEmployee(mark, null);
-        Employee headMaint = createEmployee(maint, null);
+        Employee headHR = employeeRepository.save(entityGeneration.createEmployee(hr, null));
+        Employee headDev = employeeRepository.save(entityGeneration.createEmployee(dev, null));
+        Employee headRes = employeeRepository.save(entityGeneration.createEmployee(res, null));
+        Employee headMark = employeeRepository.save(entityGeneration.createEmployee(mark, null));
+        Employee headMaint = employeeRepository.save(entityGeneration.createEmployee(maint, null));
 
         hr.setHead(headHR);
         dev.setHead(headDev);
@@ -86,7 +77,7 @@ public class Startup {
             team = createTeam(department);
 
             for (int j = 0, k = 0; j < minEmployees[i] + random.nextInt(maxRandomEmployees[i]); j++, k++) {
-                Employee employee = createEmployee(department, team);
+                Employee employee = employeeRepository.save(entityGeneration.createEmployee(department, team));
                 if (k > 5 && random.nextBoolean()) {
                     team = createTeam(department);
                     k = 0;
@@ -95,25 +86,9 @@ public class Startup {
         }
     }
 
-    private Employee createEmployee(Department department, Team team) {
-        String name = names.get(random.nextInt(names.size()));
-        String surname = surnames.get(random.nextInt(surnames.size()));
-        String address = places.get(random.nextInt(surnames.size())).concat(" " + random.nextInt(100));
-
-        name = name.replaceFirst(name.substring(0, 1), name.substring(0, 1).toUpperCase());
-        surname = surname.replaceFirst(surname.substring(0, 1), surname.substring(0, 1).toUpperCase());
-        address = address.replaceFirst(address.substring(0, 1), address.substring(0, 1).toUpperCase());
-
-        System.out.println(name + "." + surname.replaceAll(" ", "") + "@" + department.getName().replaceAll(" ", "") + ".net");
-        return employeeRepository.save(
-                new Employee(name, surname, address
-                        , name + "." + surname.replaceAll(" ", "") + "@" + department.getName().replaceAll(" ", "") + ".net"
-                        , team, department));
-    }
-
     private Team createTeam(Department department) {
         Team team = teamRepository.save(new Team(department, null));
-        Employee employee = createEmployee(department, team);
+        Employee employee = employeeRepository.save(entityGeneration.createEmployee(department, team));
         team.setLeader(employee);
         return team;
     }
