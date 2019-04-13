@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager;
+package se.lexicon.emil.CompanyManager.testing;
 
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.entities.Employee;

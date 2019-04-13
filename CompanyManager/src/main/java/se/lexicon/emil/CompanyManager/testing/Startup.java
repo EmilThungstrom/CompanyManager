@@ -1,4 +1,4 @@
-package se.lexicon.emil.CompanyManager;
+package se.lexicon.emil.CompanyManager.testing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
