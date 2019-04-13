@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -30,11 +31,17 @@ public class EntityGeneration {
         Employee head = createEmployee(department, null);
         department.setHead(head);
 
-        List<Team> teams = new ArrayList<>();
+        List<Team> teams = new LinkedList<>();
+        List<Employee> employees = new LinkedList<>();
         for(int i = 0; i < random.nextInt(4)+1; i++){
             teams.add(createTeam(department, random.nextInt(9)+1));
+
+            for(Employee employee : teams.get(i).getMembers()){
+                employees.add(employee);
+            }
         }
         department.setTeams(teams);
+        department.setEmployees(employees);
 
         return department;
     }
