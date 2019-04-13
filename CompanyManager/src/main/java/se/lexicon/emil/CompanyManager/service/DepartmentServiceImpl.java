@@ -38,8 +38,8 @@ public class DepartmentServiceImpl extends AbstractService implements Department
     }
 
     @Override
-    public List<Department> findByHead(Employee employee) {
-        return departmentRepository.findByHead(employee);
+    public List<Department> findByHeadId(int employeeId) {
+        return departmentRepository.findByHead(getEmployee(employeeId));
     }
 
     @Override

@@ -11,7 +11,7 @@ public interface DepartmentService {
 
     List<Department> findByNameContaining(String name);
 
-    List<Department> findByHead(Employee employee);
+    List<Department> findByHeadId(int employeeId);
 
     Department findById(int id);
 
