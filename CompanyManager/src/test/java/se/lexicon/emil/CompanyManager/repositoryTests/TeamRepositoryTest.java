@@ -39,8 +39,8 @@ public class TeamRepositoryTest {
     @Before
     public void init() {
 
-        Employee employee1 = new Employee("Fist1", "Last1", "adress1", "email1", null, null);
-        Employee employee2 = new Employee("Fist2", "Last2", "adress2", "email2", null, null);
+        Employee employee1 = new Employee("Fist1", "Last1", "adress1", "email1@email.com", null, null);
+        Employee employee2 = new Employee("Fist2", "Last2", "adress2", "email2@email.com", null, null);
 
         testLeader = employee1;
 

@@ -54,8 +54,8 @@ public class EmployeeRepositoryTest {
         team1 = teamRepository.save(team1);
         team2 = teamRepository.save(team2);
 
-        Employee employee1 = new Employee("First1", "Last1", "address1", "email1", team1, department1);
-        Employee employee2 = new Employee("First2", "Last2", "address2", "email2", team2, department2);
+        Employee employee1 = new Employee("First1", "Last1", "address1", "email1@email.com", team1, department1);
+        Employee employee2 = new Employee("First2", "Last2", "address2", "email2@email.com", team2, department2);
 
         testEmployee = employeeRepository.save(employee1);
         employeeRepository.save(employee2);
@@ -85,7 +85,7 @@ public class EmployeeRepositoryTest {
     @Test
     public void test_GetByEmail() {
         List<Employee> expected = Arrays.asList(testEmployee);
-        List<Employee> actual = employeeRepository.findByEmailIgnoreCase("email1");
+        List<Employee> actual = employeeRepository.findByEmailIgnoreCase("email1@email.com");
         assertEquals(expected, actual);
     }
 
