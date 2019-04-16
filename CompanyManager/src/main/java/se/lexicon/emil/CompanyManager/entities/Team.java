@@ -76,13 +76,13 @@ public class Team {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Team team = (Team) o;
-        return Objects.equals(department, team.department) &&
+        return id == team.id &&
                 Objects.equals(leader, team.leader) &&
-                members.equals(team.members);
+                Objects.equals(members, team.members);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(department, leader, members);
+        return Objects.hash(id, leader, members);
     }
 }

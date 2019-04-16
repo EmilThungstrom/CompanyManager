@@ -88,14 +88,12 @@ public class Department {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Department that = (Department) o;
-        return Objects.equals(name, that.name) &&
-                Objects.equals(head, that.head) &&
-                employees.equals(that.employees) &&
-                teams.equals(that.teams);
+        return id == that.id &&
+                Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, head, employees, teams);
+        return Objects.hash(id, name);
     }
 }
