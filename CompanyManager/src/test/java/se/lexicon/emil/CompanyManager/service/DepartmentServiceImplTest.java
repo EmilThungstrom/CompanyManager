@@ -24,7 +24,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
@@ -80,22 +79,22 @@ public class DepartmentServiceImplTest {
     @Test
     public void findAll() {
         List<Department> departments = Arrays.asList(department1, department2, department3, department4, department5);
-        given(departmentRepository.findAll()).willReturn(departments);
+        when(departmentRepository.findAll()).thenReturn(departments);
         assertEquals(departments, departmentService.findAll());
     }
 
     @Test
     public void findByNameContaining() {
         List<Department> departments = Arrays.asList(department1, department2, department3, department4, department5);
-        given(departmentRepository.findByNameContaining("department")).willReturn(departments);
+        when(departmentRepository.findByNameContaining("department")).thenReturn(departments);
         assertEquals(departments, departmentService.findByNameContaining("department"));
 
         List<Department> onlyDepartment3 = Arrays.asList(department3);
-        given(departmentRepository.findByNameContaining("department3")).willReturn(onlyDepartment3);
+        when(departmentRepository.findByNameContaining("department3")).thenReturn(onlyDepartment3);
         assertEquals(onlyDepartment3, departmentService.findByNameContaining("department3"));
 
         List<Department> empty = Arrays.asList();
-        given(departmentRepository.findByNameContaining("departments")).willReturn(empty);
+        when(departmentRepository.findByNameContaining("departments")).thenReturn(empty);
         assertEquals(empty, departmentService.findByNameContaining("departments"));
     }
 
@@ -103,17 +102,17 @@ public class DepartmentServiceImplTest {
     public void findByHeadId() {
         Employee headDepartment2 = department2.getHead();
         List<Department> onlyDepartment2 = Arrays.asList(department2);
-        given(employeeRepository.findById(0)).willReturn(Optional.of(headDepartment2));
-        given(departmentRepository.findByHead(headDepartment2)).willReturn(onlyDepartment2);
+        when(employeeRepository.findById(0)).thenReturn(Optional.of(headDepartment2));
+        when(departmentRepository.findByHead(headDepartment2)).thenReturn(onlyDepartment2);
         assertEquals(onlyDepartment2, departmentService.findByHeadId(0));
 
         Employee headDepartment3A5= department3.getHead();
         List<Department> departments3A5 = Arrays.asList(department3, department5);
-        given(employeeRepository.findById(1)).willReturn(Optional.of(headDepartment3A5));
-        given(departmentRepository.findByHead(headDepartment3A5)).willReturn(departments3A5);
+        when(employeeRepository.findById(1)).thenReturn(Optional.of(headDepartment3A5));
+        when(departmentRepository.findByHead(headDepartment3A5)).thenReturn(departments3A5);
         assertEquals(departments3A5, departmentService.findByHeadId(1));
 
-        given(employeeRepository.findById(11)).willReturn(Optional.empty());
+        when(employeeRepository.findById(11)).thenReturn(Optional.empty());
         assertThrows(EntityNotFoundException.class, () -> departmentService.findByHeadId(11));
     }
 
