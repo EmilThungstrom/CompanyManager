@@ -10,6 +10,7 @@ import se.lexicon.emil.CompanyManager.forms.TeamForm;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin
@@ -41,6 +42,11 @@ public class DepartmentRestController {
     @GetMapping(params = "id")
     public ResponseEntity<Department> findById(@RequestParam("id") int id) {
         return ResponseEntity.ok(departmentService.findById(id));
+    }
+
+    @GetMapping("/list")
+    public ResponseEntity<List<String>> listAll(){
+        return ResponseEntity.ok(departmentService.findAll().stream().map(department -> department.getName()).collect(Collectors.toList()));
     }
 
     @PostMapping("/create")
