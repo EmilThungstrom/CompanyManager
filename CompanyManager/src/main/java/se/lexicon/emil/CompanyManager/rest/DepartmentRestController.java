@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.forms.DepartmentEmployeeForm;
+import se.lexicon.emil.CompanyManager.forms.DepartmentForm;
 import se.lexicon.emil.CompanyManager.forms.TeamForm;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
@@ -43,8 +44,8 @@ public class DepartmentRestController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Department> createDepartment(@RequestBody String name) {
-        return ResponseEntity.ok(departmentService.createDepartment(name));
+    public ResponseEntity<Department> createDepartment(@RequestBody DepartmentForm departmentForm) {
+        return ResponseEntity.ok(departmentService.createDepartment(departmentForm.name));
     }
 
     @PostMapping("/delete")
