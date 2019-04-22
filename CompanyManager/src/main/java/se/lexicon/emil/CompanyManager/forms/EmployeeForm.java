@@ -44,6 +44,9 @@ public class EmployeeForm {
     }
 
     private String formatString(String s) {
+        if(s.isEmpty())
+            return s;
+
         s = s.trim().toLowerCase();
         return s.replaceFirst(s.substring(0, 1), s.substring(0, 1).toUpperCase());
     }
