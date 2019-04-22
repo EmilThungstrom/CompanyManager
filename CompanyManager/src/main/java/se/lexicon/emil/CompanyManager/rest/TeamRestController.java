@@ -10,6 +10,7 @@ import se.lexicon.emil.CompanyManager.service.TeamService;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/team")
 public class TeamRestController {
 

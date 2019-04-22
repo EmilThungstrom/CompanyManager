@@ -10,6 +10,7 @@ import se.lexicon.emil.CompanyManager.service.EmployeeService;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/employee")
 public class EmployeeRestController {
 
