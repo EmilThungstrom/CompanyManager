@@ -45,9 +45,9 @@ public class EmployeeServiceImpl extends AbstractService implements EmployeeServ
         Stream<Employee> employeeStream = ((List<Employee>) employeeRepository.findAll()).stream();
 
         if (employeeForm.departmentId > 0)
-            employeeStream = employeeStream.filter(employee -> employee.getDepartment().getId() == employeeForm.departmentId);
+            employeeStream = employeeStream.filter(employee -> employee.getDepartment() != null &&  employee.getDepartment().getId() == employeeForm.departmentId);
         if (employeeForm.teamId > 0)
-            employeeStream = employeeStream.filter(employee -> employee.getTeam().getId() == employeeForm.teamId);
+            employeeStream = employeeStream.filter(employee -> employee.getTeam() != null && employee.getTeam().getId() == employeeForm.teamId);
         if (employeeForm.getFirstName() != null && !employeeForm.getFirstName().isEmpty())
             employeeStream = employeeStream.filter(employee -> employee.getFirstName().equalsIgnoreCase(employeeForm.getFirstName()));
         if (employeeForm.getLastName() != null && !employeeForm.getLastName().isEmpty())
