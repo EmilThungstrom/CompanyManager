@@ -10,6 +10,7 @@ import se.lexicon.emil.CompanyManager.forms.TeamForm;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -45,8 +46,8 @@ public class DepartmentRestController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<String>> listAll(){
-        return ResponseEntity.ok(departmentService.findAll().stream().map(department -> department.getName()).collect(Collectors.toList()));
+    public ResponseEntity<Map<String, Integer>> listAll(){
+        return ResponseEntity.ok(departmentService.findAll().stream().collect(Collectors.toMap(department -> department.getName(), department -> department.getId())));
     }
 
     @PostMapping("/create")
