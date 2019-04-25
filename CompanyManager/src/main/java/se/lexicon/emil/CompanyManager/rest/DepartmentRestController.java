@@ -50,6 +50,11 @@ public class DepartmentRestController {
         return ResponseEntity.ok(departmentService.findAll().stream().collect(Collectors.toMap(department -> department.getName(), department -> department.getId())));
     }
 
+    @GetMapping("/teams")
+    public ResponseEntity<Map<Integer, List<Integer>>> getDepartmentTeams(){
+        return ResponseEntity.ok(departmentService.findAll().stream().collect(Collectors.toMap(department -> department.getId(), department -> department.getTeams().stream().map(team -> team.getId()).collect(Collectors.toList()))));
+    }
+
     @PostMapping("/create")
     public ResponseEntity<Department> createDepartment(@RequestBody DepartmentForm departmentForm) {
         return ResponseEntity.ok(departmentService.createDepartment(departmentForm.name));
