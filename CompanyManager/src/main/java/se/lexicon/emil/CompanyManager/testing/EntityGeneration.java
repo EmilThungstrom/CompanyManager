@@ -64,13 +64,15 @@ public class EntityGeneration {
         String name = names.get(random.nextInt(names.size()));
         String surname = surnames.get(random.nextInt(surnames.size()));
         String address = places.get(random.nextInt(surnames.size())).concat(" " + random.nextInt(100));
+        String departmentName = department != null ? department.getName().replaceAll(" ", ""):"null";
 
         name = name.replaceFirst(name.substring(0, 1), name.substring(0, 1).toUpperCase());
         surname = surname.replaceFirst(surname.substring(0, 1), surname.substring(0, 1).toUpperCase());
         address = address.replaceFirst(address.substring(0, 1), address.substring(0, 1).toUpperCase());
 
+
         return new Employee(name, surname, address
-                , name + "." + surname.replaceAll(" ", "") + "@" + department.getName().replaceAll(" ", "") + ".net"
+                , name + "." + surname.replaceAll(" ", "") + "@" + departmentName + ".net"
                 , team, department);
     }
 }
