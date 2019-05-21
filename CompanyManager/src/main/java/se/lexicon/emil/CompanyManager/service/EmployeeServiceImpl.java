@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 public class EmployeeServiceImpl extends AbstractService implements EmployeeService {
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository, TeamRepository teamRepository, DepartmentRepository departmentRepository) {
+    public EmployeeServiceImpl(DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, TeamRepository teamRepository) {
         this.employeeRepository = employeeRepository;
         this.teamRepository = teamRepository;
         this.departmentRepository = departmentRepository;
