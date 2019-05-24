@@ -17,7 +17,8 @@ import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 import java.util.Arrays;
 import java.util.List;
 
-import static junit.framework.TestCase.*;
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertFalse;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

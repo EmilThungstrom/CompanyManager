@@ -1,7 +1,6 @@
 package se.lexicon.emil.CompanyManager.service;
 
 import se.lexicon.emil.CompanyManager.entities.Department;
-import se.lexicon.emil.CompanyManager.entities.Employee;
 
 import java.util.List;
 

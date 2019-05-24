@@ -1,6 +1,5 @@
 package se.lexicon.emil.CompanyManager.rest;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -9,9 +8,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,11 +16,7 @@ import se.lexicon.emil.CompanyManager.entities.Department;
 import se.lexicon.emil.CompanyManager.forms.DepartmentEmployeeForm;
 import se.lexicon.emil.CompanyManager.forms.DepartmentForm;
 import se.lexicon.emil.CompanyManager.forms.TeamForm;
-import se.lexicon.emil.CompanyManager.repositories.DepartmentRepository;
-import se.lexicon.emil.CompanyManager.repositories.EmployeeRepository;
-import se.lexicon.emil.CompanyManager.repositories.TeamRepository;
 import se.lexicon.emil.CompanyManager.service.DepartmentService;
-import se.lexicon.emil.CompanyManager.service.DepartmentServiceImpl;
 import se.lexicon.emil.CompanyManager.testing.EntityGeneration;
 
 import java.io.IOException;
@@ -32,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
