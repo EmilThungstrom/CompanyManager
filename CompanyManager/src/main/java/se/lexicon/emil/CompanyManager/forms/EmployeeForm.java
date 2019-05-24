@@ -1,5 +1,7 @@
 package se.lexicon.emil.CompanyManager.forms;
 
+import java.util.Objects;
+
 public class EmployeeForm {
 
     private String firstName;
@@ -49,5 +51,24 @@ public class EmployeeForm {
 
         s = s.trim().toLowerCase();
         return s.replaceFirst(s.substring(0, 1), s.substring(0, 1).toUpperCase());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EmployeeForm that = (EmployeeForm) o;
+        return employeeId == that.employeeId &&
+                departmentId == that.departmentId &&
+                teamId == that.teamId &&
+                Objects.equals(firstName, that.firstName) &&
+                Objects.equals(lastName, that.lastName) &&
+                Objects.equals(address, that.address) &&
+                Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, address, email, employeeId, departmentId, teamId);
     }
 }
