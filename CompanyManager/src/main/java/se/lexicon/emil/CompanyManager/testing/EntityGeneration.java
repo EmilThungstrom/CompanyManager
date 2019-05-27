@@ -32,9 +32,10 @@ public class EntityGeneration {
         department.setHead(head);
 
         List<Team> teams = new LinkedList<>();
+        int numOfTeams = random.nextInt(4)+1;
         List<Employee> employees = new LinkedList<>();
-        for(int i = 0; i < random.nextInt(4)+1; i++){
-            teams.add(createTeam(department, random.nextInt(9)+1));
+        for(int i = 0; i < numOfTeams; i++){
+            teams.add(createTeam(department, random.nextInt(9)+3));
 
             for(Employee employee : teams.get(i).getMembers()){
                 employees.add(employee);
