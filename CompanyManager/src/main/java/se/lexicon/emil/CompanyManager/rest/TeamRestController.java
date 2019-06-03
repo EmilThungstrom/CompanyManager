@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/team")
 public class TeamRestController {
 
-    TeamService teamService;
+    private TeamService teamService;
 
     @Autowired
     public TeamRestController(TeamService teamService) {
